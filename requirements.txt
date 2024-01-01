@@ -1,2 +1,4 @@
-pyaes==1.6.1
-pysocks==1.7.1
+sphinx
+sphinx_rtd_theme==1.0.0
+sphinx_copybutton
+sphinx-autobuild
