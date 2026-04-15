@@ -150,9 +150,67 @@ llms_txt_filename = "llms.txt"
 llms_txt_full_file = False
 
 # Provide a specific, agent-friendly summary of Pyrogram
-llms_txt_summary = """Pyrogram is an elegant, modern, and asynchronous MTProto API framework for Telegram in Python for users and bots.
+llms_txt_summary = """Pyrogram is an elegant, modern, and asynchronous Python MTProto client library for the Telegram API in Python for users and bots. It is an async-first framework supporting Python 3.9+ (CPython and PyPy), forked from Pyrogram with continued development.
+
+Key Characteristics:
+- License: LGPL-3.0
+- Python: 3.9+ (supports CPython and PyPy)
+- Architecture: async/await based with optional uvloop support
+- Crypto: Uses pyaes (pure Python) or TgCrypto (C extension for performance)
+
 This documentation covers the Pyrogram Client High-Level API, the Smart Plugin system, and the raw Low-Level Telegram Functions Types.
 We merge changes made to few of pyrogram forks plus changes made by us to this repository. All the features are just customized feature mostly for personal use; there is no guarantee in them being stable, USE AT YOUR OWN RISK.
+
+
+---
+Project Structure
+
+pyrogram/
+├── client.py              # Main Client class (extends Methods)
+├── methods/               # API method implementations
+│   ├── decorators         # Decorators for update handling as an alternative to handler classes
+│   ├── __init__.py        # Methods class (mixin of all method categories)
+│   ├── auth/             # Authentication methods
+│   ├── messages/         # Message operations
+│   ├── chats/            # Chat/channel operations
+│   ├── invite_links/     # Telegram Links 2.0 operations
+│   ├── contacts/         # Telegram Contact-specific methods
+│   ├── users/            # User operations
+│   ├── password/         # Cloud Password operations
+│   ├── stories/          # Story operations
+│   ├── chat_topics/      # Supergroup Forum operations
+│   ├── stickers/         # Telegram Sticker-specific methods
+│   ├── bots/             # Bot-specific methods
+│   ├── business/         # Telegram Business Bot-specific methods
+│   ├── advanced/         # Advanced MTProto methods
+│   ├── utilities/        # Utility methods (idle, compose, handlers)
+│   └── phone/            # Telegram Video Chat methods
+├── types/                # Telegram API type definitions
+│   ├── object.py         # Base Object class
+│   ├── user_and_chats/   # User, Chat, etc.
+│   ├── messages_and_media/  # Message, Photo, etc.
+│   ├── input_media/      # Input media types
+│   └── input_message_content/  # Input content types
+├── filters.py            # Message/update filters
+├── handlers/             # Handler classes
+├── dispatcher.py         # Update dispatching
+├── session/              # MTProto session management
+│   ├── session.py
+│   └── internals/
+├── connection/           # Network connection layer
+│   ├── connection.py
+│   └── transport/tcp/    # TCP transports (abridged, intermediate, full)
+├── storage/              # Session storage backends
+│   ├── storage.py        # Abstract base
+│   └── sqlite_storage.py
+├── crypto/                 # Cryptographic operations
+├── raw/                    # Raw MTProto layer (auto-generated)
+├── enums/                  # Enumeration definitions
+├── errors/                 # Exception classes
+├── parser/                 # HTML/Markdown parsers
+└── utils.py                # Utility helpers
+
+---
 """
 
 llms_txt_title = "PyroTGFork"
