@@ -48,6 +48,7 @@ Index
     - :class:`ChatJoinRequestHandler`
 
 
+    - :class:`ManagedBotUpdateHandler`
     - :class:`DeletedMessagesHandler`
     - :class:`UserStatusHandler`
     - :class:`DisconnectHandler`
@@ -77,6 +78,7 @@ Details
 .. autoclass:: ChatJoinRequestHandler()
 
 
+.. autoclass:: ManagedBotUpdateHandler()
 .. autoclass:: DeletedMessagesHandler()
 .. autoclass:: UserStatusHandler()
 .. autoclass:: DisconnectHandler()

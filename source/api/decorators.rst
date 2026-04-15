@@ -48,6 +48,7 @@ Index
     - :meth:`~Client.on_chat_join_request`
 
 
+    - :meth:`~Client.on_managed_bot`
     - :meth:`~Client.on_deleted_messages`
     - :meth:`~Client.on_user_status`
     - :meth:`~Client.on_disconnect`
@@ -77,6 +78,7 @@ Details
 .. autodecorator:: pyrogram.Client.on_chat_join_request()
 
 
+.. autodecorator:: pyrogram.Client.on_managed_bot()
 .. autodecorator:: pyrogram.Client.on_deleted_messages()
 .. autodecorator:: pyrogram.Client.on_user_status()
 .. autodecorator:: pyrogram.Client.on_disconnect()

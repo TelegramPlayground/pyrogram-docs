@@ -20,7 +20,7 @@ If you found any issue or have any suggestions, feel free to make `an issue <htt
     - In :meth:`~pyrogram.Client.copy_message`, ``ValueError`` is raised instead of ``logging`` it.
     - In :meth:`~pyrogram.Client.download_media`, if the message is a :obj:`~pyrogram.types.PaidMediaInfo` with more than one ``paid_media`` **and** ``idx`` was not specified, then a list of paths or binary file-like objects is returned.
     - PR `#115 <https://github.com/TelegramPlayGround/pyrogram/pull/115>`_ This `change <https://github.com/pyrogram/pyrogram/pull/966#issuecomment-1108858881>`_ breaks some usages with offset-naive and offset-aware datetimes.
-    - PR from upstream: `#1411 <https://github.com/pyrogram/pyrogram/pull/1411>`_ without attribution.
+    - PR from upstream `#1411 <https://github.com/pyrogram/pyrogram/pull/1411>`_: Rename some of the attributes of :obj:`~pyrogram.enums.MessagesFilter` for consistency.
     - If you relied on internal types like ``import pyrogram.file_id`` OR ``import pyrogram.utils``, Then read this full document to know where `else <https://t.me/PyrogramChat/42497>`_ your code will break.
     - :obj:`~pyrogram.types.InlineKeyboardButton` only accepts keyword arguments instead of positional arguments.
 
