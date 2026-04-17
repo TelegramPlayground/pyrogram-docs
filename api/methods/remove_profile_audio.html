@@ -893,6 +893,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/comparison-with-other-forks.html">Comparison with Other Forks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../topics/use-filters.html">Using Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../topics/create-filters.html">Creating Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../topics/more-on-updates.html">More on Updates</a></li>
@@ -1026,8 +1027,14 @@
 <span class="sig-prename descclassname"><span class="pre">Client.</span></span><span class="sig-name descname"><span class="pre">remove_profile_audio</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/73e631a/pyrogram/methods/chats/remove_profile_audio.py#L25-L53"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.Client.remove_profile_audio" title="Link to this definition">¶</a></dt>
 <dd><p>Removes an audio file from the profile audio files of the current user.</p>
 <strong>Usable by</strong>
-<span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i><span class="iv-fallback">✅ </span> Users</span>
-<span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i><span class="iv-fallback">❌ </span> Bots</span><dl class="field-list simple">
+<div class="usable-by" style="display: inline-block;">
+    <i class="fa-solid fa-check" style="color: var(--color-green)"></i>
+    <span class="iv-fallback">✅ </span>Users
+</div>
+<div class="usable-by" style="display: inline-block;">
+    <i class="fa-solid fa-xmark" style="color: var(--color-red)"></i>
+    <span class="iv-fallback">❌ </span>Bots
+</div><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>audio</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – Identifier of the audio file to be removed.
 Use <a class="reference internal" href="get_chat_audios.html#pyrogram.Client.get_chat_audios" title="pyrogram.Client.get_chat_audios"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_chat_audios()</span></code></a> to get the Audio identifier.</p>

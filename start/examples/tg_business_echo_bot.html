@@ -893,6 +893,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/comparison-with-other-forks.html">Comparison with Other Forks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../topics/use-filters.html">Using Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../topics/create-filters.html">Creating Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../topics/more-on-updates.html">More on Updates</a></li>
@@ -1025,8 +1026,14 @@
 <p>It uses the <a class="reference internal" href="../../api/decorators.html#pyrogram.Client.on_message" title="pyrogram.Client.on_message"><code class="xref py py-meth docutils literal notranslate"><span class="pre">on_message()</span></code></a> decorator to register a <a class="reference internal" href="../../api/handlers.html#pyrogram.handlers.MessageHandler" title="pyrogram.handlers.MessageHandler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MessageHandler</span></code></a> and applies two filters on it:
 <code class="docutils literal notranslate"><span class="pre">filters.tg_business</span></code> and <code class="docutils literal notranslate"><span class="pre">filters.private</span></code> to make sure it will reply to private business messages only.</p>
 <strong>Usable by</strong>
-<span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i><span class="iv-fallback">❌ </span> Users</span>
-<span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i><span class="iv-fallback">✅ </span> Bots</span><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pyrogram</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">filters</span>
+<div class="usable-by" style="display: inline-block;">
+    <i class="fa-solid fa-xmark" style="color: var(--color-red)"></i>
+    <span class="iv-fallback">❌ </span>Users
+</div>
+<div class="usable-by" style="display: inline-block;">
+    <i class="fa-solid fa-check" style="color: var(--color-green)"></i>
+    <span class="iv-fallback">✅ </span>Bots
+</div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pyrogram</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span><span class="p">,</span> <span class="n">filters</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span><span class="s2">&quot;my_account&quot;</span><span class="p">)</span>
 
