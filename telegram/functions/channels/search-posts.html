@@ -1023,11 +1023,10 @@
 <h1>channels.SearchPosts<a class="headerlink" href="#channels-searchposts" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.channels.SearchPosts">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.channels.</span></span><span class="sig-name descname"><span class="pre">SearchPosts</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/channels/search_posts.py#L35-L131"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.channels.SearchPosts" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.channels.</span></span><span class="sig-name descname"><span class="pre">SearchPosts</span></span><a class="headerlink" href="#pyrogram.raw.functions.channels.SearchPosts" title="Link to this definition">¶</a></dt>
 <dd><p>Globally search for posts from public <a class="reference external" href="https://corefork.telegram.org/api/channel">channels</a> (including those we aren’t a member of) containing either a specific hashtag, or a full text query.
 Exactly one of query and hashtag must be set.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Users</span>
 <span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
@@ -1035,27 +1034,23 @@ Exactly one of query and hashtag must be set.</p>
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">F2C4F24D</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>offset_rate (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>):</dt><dd><p>Initially 0, then set to the <a class="reference external" href="https://corefork.telegram.org/constructor/messages.messagesSlice">next_rate parameter of messages.messagesSlice</a>, or if that is absent, the date of the last returned message.</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>offset_rate</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>) – Initially 0, then set to the <a class="reference external" href="https://corefork.telegram.org/constructor/messages.messagesSlice">next_rate parameter of messages.messagesSlice</a>, or if that is absent, the date of the last returned message.</p></li>
+<li><p><strong>offset_peer</strong> (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>) – <a class="reference external" href="https://corefork.telegram.org/api/offsets">Offsets for pagination, for more info click here</a></p></li>
+<li><p><strong>offset_id</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>) – <a class="reference external" href="https://corefork.telegram.org/api/offsets">Offsets for pagination, for more info click here</a></p></li>
+<li><p><strong>limit</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>) – Maximum number of results to return, <a class="reference external" href="https://corefork.telegram.org/api/offsets">see pagination</a></p></li>
+<li><p><strong>hashtag</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>) – The hashtag to search, without the # character.</p></li>
+<li><p><strong>query</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>) – The full text query: each user has a limited amount of free full text search slots, after which payment is required, see <a class="reference external" href="https://corefork.telegram.org/api/search#posts-tab">here »</a> for more info on the full flow.</p></li>
+<li><p><strong>allow_paid_stars</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>, <em>optional</em>) – For full text post searches (query), allows payment of the specified amount of Stars for the search, see <a class="reference external" href="https://corefork.telegram.org/api/search#posts-tab">here »</a> for more info on the full flow.</p></li>
+</ul>
 </dd>
-<dt>offset_peer (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>):</dt><dd><p><a class="reference external" href="https://corefork.telegram.org/api/offsets">Offsets for pagination, for more info click here</a></p>
-</dd>
-<dt>offset_id (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>):</dt><dd><p><a class="reference external" href="https://corefork.telegram.org/api/offsets">Offsets for pagination, for more info click here</a></p>
-</dd>
-<dt>limit (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>):</dt><dd><p>Maximum number of results to return, <a class="reference external" href="https://corefork.telegram.org/api/offsets">see pagination</a></p>
-</dd>
-<dt>hashtag (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>):</dt><dd><p>The hashtag to search, without the # character.</p>
-</dd>
-<dt>query (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>):</dt><dd><p>The full text query: each user has a limited amount of free full text search slots, after which payment is required, see <a class="reference external" href="https://corefork.telegram.org/api/search#posts-tab">here »</a> for more info on the full flow.</p>
-</dd>
-<dt>allow_paid_stars (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>, <em>optional</em>):</dt><dd><p>For full text post searches (query), allows payment of the specified amount of Stars for the search, see <a class="reference external" href="https://corefork.telegram.org/api/search#posts-tab">here »</a> for more info on the full flow.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../base/messages/messages.html#pyrogram.raw.base.messages.Messages" title="pyrogram.raw.base.messages.Messages"><code class="xref py py-obj docutils literal notranslate"><span class="pre">messages.Messages</span></code></a></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><a class="reference internal" href="../../base/messages/messages.html#pyrogram.raw.base.messages.Messages" title="pyrogram.raw.base.messages.Messages"><code class="xref py py-obj docutils literal notranslate"><span class="pre">messages.Messages</span></code></a></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1096,7 +1091,7 @@ Exactly one of query and hashtag must be set.</p>
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

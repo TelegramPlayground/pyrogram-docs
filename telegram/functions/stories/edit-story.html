@@ -1023,39 +1023,33 @@
 <h1>stories.EditStory<a class="headerlink" href="#stories-editstory" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.stories.EditStory">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.stories.</span></span><span class="sig-name descname"><span class="pre">EditStory</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/stories/edit_story.py#L35-L145"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.stories.EditStory" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.stories.</span></span><span class="sig-name descname"><span class="pre">EditStory</span></span><a class="headerlink" href="#pyrogram.raw.functions.stories.EditStory" title="Link to this definition">¶</a></dt>
 <dd><p>Edit an uploaded <a class="reference external" href="https://corefork.telegram.org/api/stories">story</a>
 May also be used in a <a class="reference external" href="https://corefork.telegram.org/api/bots/connected-business-bots">business connection</a>, not by wrapping the query in <a class="reference external" href="https://corefork.telegram.org/method/invokeWithBusinessConnection">invokeWithBusinessConnection</a>, but rather by specifying the ID of a controlled business user in peer: in this context, the method can only be used to edit stories posted by the same business bot on behalf of the user with <a class="reference external" href="https://corefork.telegram.org/method/stories.sendStory">stories.sendStory</a>.</p>
-<blockquote>
-<div><dl class="simple">
+<dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
 <li><p>Layer: <code class="docutils literal notranslate"><span class="pre">224</span></code></p></li>
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">2C63A72B</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>peer (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>):</dt><dd><p>Peer where the story was posted.</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peer</strong> (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>) – Peer where the story was posted.</p></li>
+<li><p><strong>id</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>) – ID of story to edit.</p></li>
+<li><p><strong>media</strong> (<a class="reference internal" href="../../base/input-media.html#pyrogram.raw.base.InputMedia" title="pyrogram.raw.base.InputMedia"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputMedia</span></code></a>, <em>optional</em>) – If specified, replaces the story media.</p></li>
+<li><p><strong>media_areas</strong> (List of <a class="reference internal" href="../../base/media-area.html#pyrogram.raw.base.MediaArea" title="pyrogram.raw.base.MediaArea"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MediaArea</span></code></a>, <em>optional</em>) – <a class="reference external" href="https://corefork.telegram.org/api/stories#media-areas">Media areas</a> associated to the story, see <a class="reference external" href="https://corefork.telegram.org/api/stories#media-areas">here »</a> for more info.</p></li>
+<li><p><strong>caption</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>) – If specified, replaces the story caption.</p></li>
+<li><p><strong>entities</strong> (List of <a class="reference internal" href="../../base/message-entity.html#pyrogram.raw.base.MessageEntity" title="pyrogram.raw.base.MessageEntity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MessageEntity</span></code></a>, <em>optional</em>) – <a class="reference external" href="https://corefork.telegram.org/api/entities">Message entities for styled text in the caption</a>, if allowed by the <a class="reference external" href="https://corefork.telegram.org/api/config#stories-entities">stories_entities client configuration parameter »</a>.</p></li>
+<li><p><strong>privacy_rules</strong> (List of <a class="reference internal" href="../../base/input-privacy-rule.html#pyrogram.raw.base.InputPrivacyRule" title="pyrogram.raw.base.InputPrivacyRule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPrivacyRule</span></code></a>, <em>optional</em>) – If specified, alters the <a class="reference external" href="https://corefork.telegram.org/api/privacy">privacy settings »</a> of the story, changing who can or can’t view the story.</p></li>
+<li><p><strong>music</strong> (<a class="reference internal" href="../../base/input-document.html#pyrogram.raw.base.InputDocument" title="pyrogram.raw.base.InputDocument"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputDocument</span></code></a>, <em>optional</em>)</p></li>
+</ul>
 </dd>
-<dt>id (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>):</dt><dd><p>ID of story to edit.</p>
-</dd>
-<dt>media (<a class="reference internal" href="../../base/input-media.html#pyrogram.raw.base.InputMedia" title="pyrogram.raw.base.InputMedia"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputMedia</span></code></a>, <em>optional</em>):</dt><dd><p>If specified, replaces the story media.</p>
-</dd>
-<dt>media_areas (List of <a class="reference internal" href="../../base/media-area.html#pyrogram.raw.base.MediaArea" title="pyrogram.raw.base.MediaArea"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MediaArea</span></code></a>, <em>optional</em>):</dt><dd><p><a class="reference external" href="https://corefork.telegram.org/api/stories#media-areas">Media areas</a> associated to the story, see <a class="reference external" href="https://corefork.telegram.org/api/stories#media-areas">here »</a> for more info.</p>
-</dd>
-<dt>caption (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>):</dt><dd><p>If specified, replaces the story caption.</p>
-</dd>
-<dt>entities (List of <a class="reference internal" href="../../base/message-entity.html#pyrogram.raw.base.MessageEntity" title="pyrogram.raw.base.MessageEntity"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MessageEntity</span></code></a>, <em>optional</em>):</dt><dd><p><a class="reference external" href="https://corefork.telegram.org/api/entities">Message entities for styled text in the caption</a>, if allowed by the <a class="reference external" href="https://corefork.telegram.org/api/config#stories-entities">stories_entities client configuration parameter »</a>.</p>
-</dd>
-<dt>privacy_rules (List of <a class="reference internal" href="../../base/input-privacy-rule.html#pyrogram.raw.base.InputPrivacyRule" title="pyrogram.raw.base.InputPrivacyRule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPrivacyRule</span></code></a>, <em>optional</em>):</dt><dd><p>If specified, alters the <a class="reference external" href="https://corefork.telegram.org/api/privacy">privacy settings »</a> of the story, changing who can or can’t view the story.</p>
-</dd>
-<dt>music (<a class="reference internal" href="../../base/input-document.html#pyrogram.raw.base.InputDocument" title="pyrogram.raw.base.InputDocument"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputDocument</span></code></a>, <em>optional</em>):</dt><dd><p>N/A</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../base/updates.html#pyrogram.raw.base.Updates" title="pyrogram.raw.base.Updates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Updates</span></code></a></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><a class="reference internal" href="../../base/updates.html#pyrogram.raw.base.Updates" title="pyrogram.raw.base.Updates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Updates</span></code></a></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1096,7 +1090,7 @@ May also be used in a <a class="reference external" href="https://corefork.teleg
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

@@ -1023,11 +1023,10 @@
 <h1>bots.InvokeWebViewCustomMethod<a class="headerlink" href="#bots-invokewebviewcustommethod" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.bots.InvokeWebViewCustomMethod">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.bots.</span></span><span class="sig-name descname"><span class="pre">InvokeWebViewCustomMethod</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/bots/invoke_web_view_custom_method.py#L35-L94"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.bots.InvokeWebViewCustomMethod" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.bots.</span></span><span class="sig-name descname"><span class="pre">InvokeWebViewCustomMethod</span></span><a class="headerlink" href="#pyrogram.raw.functions.bots.InvokeWebViewCustomMethod" title="Link to this definition">¶</a></dt>
 <dd><p>Send a custom request from a <a class="reference external" href="https://corefork.telegram.org/api/bots/webapps">mini bot app</a>, triggered by a <a class="reference external" href="https://corefork.telegram.org/api/web-events#web-app-invoke-custom-method">web_app_invoke_custom_method event</a>.
 The response should be sent using a <a class="reference external" href="https://corefork.telegram.org/api/bots/webapps#custom-method-invoked">custom_method_invoked</a> event, <a class="reference external" href="https://corefork.telegram.org/api/web-events#web-app-invoke-custom-method">see here</a> for more info on the flow.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Users</span>
 <span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
@@ -1035,19 +1034,19 @@ The response should be sent using a <a class="reference external" href="https://
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">87FC5E7</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>bot (<a class="reference internal" href="../../base/input-user.html#pyrogram.raw.base.InputUser" title="pyrogram.raw.base.InputUser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputUser</span></code></a>):</dt><dd><p>Identifier of the bot associated to the <a class="reference external" href="https://corefork.telegram.org/api/bots/webapps">mini bot app</a></p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bot</strong> (<a class="reference internal" href="../../base/input-user.html#pyrogram.raw.base.InputUser" title="pyrogram.raw.base.InputUser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputUser</span></code></a>) – Identifier of the bot associated to the <a class="reference external" href="https://corefork.telegram.org/api/bots/webapps">mini bot app</a></p></li>
+<li><p><strong>custom_method</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – Identifier of the custom method to invoke</p></li>
+<li><p><strong>params</strong> (<a class="reference internal" href="../../base/data-json.html#pyrogram.raw.base.DataJSON" title="pyrogram.raw.base.DataJSON"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataJSON</span></code></a>) – Method parameters</p></li>
+</ul>
 </dd>
-<dt>custom_method (<code class="docutils literal notranslate"><span class="pre">str</span></code>):</dt><dd><p>Identifier of the custom method to invoke</p>
-</dd>
-<dt>params (<a class="reference internal" href="../../base/data-json.html#pyrogram.raw.base.DataJSON" title="pyrogram.raw.base.DataJSON"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataJSON</span></code></a>):</dt><dd><p>Method parameters</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../base/data-json.html#pyrogram.raw.base.DataJSON" title="pyrogram.raw.base.DataJSON"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataJSON</span></code></a></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><a class="reference internal" href="../../base/data-json.html#pyrogram.raw.base.DataJSON" title="pyrogram.raw.base.DataJSON"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataJSON</span></code></a></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1088,7 +1087,7 @@ The response should be sent using a <a class="reference external" href="https://
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

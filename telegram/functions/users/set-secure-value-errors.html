@@ -1023,11 +1023,10 @@
 <h1>users.SetSecureValueErrors<a class="headerlink" href="#users-setsecurevalueerrors" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.users.SetSecureValueErrors">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.users.</span></span><span class="sig-name descname"><span class="pre">SetSecureValueErrors</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/users/set_secure_value_errors.py#L35-L86"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.users.SetSecureValueErrors" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.users.</span></span><span class="sig-name descname"><span class="pre">SetSecureValueErrors</span></span><a class="headerlink" href="#pyrogram.raw.functions.users.SetSecureValueErrors" title="Link to this definition">¶</a></dt>
 <dd><p>Notify the user that the sent <a class="reference external" href="https://corefork.telegram.org/passport">passport</a> data contains some errors The user will not be able to re-submit their Passport data to you until the errors are fixed (the contents of the field for which you returned the error must change).
 Use this if the data submitted by the user doesn’t satisfy the standards your service requires for any reason. For example, if a birthday date seems invalid, a submitted document is blurry, a scan shows evidence of tampering, etc. Supply some details in the error message to make sure the user knows how to correct the issues.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Users</span>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Bots</span><dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
@@ -1035,17 +1034,18 @@ Use this if the data submitted by the user doesn’t satisfy the standards your 
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">90C894B5</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>id (<a class="reference internal" href="../../base/input-user.html#pyrogram.raw.base.InputUser" title="pyrogram.raw.base.InputUser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputUser</span></code></a>):</dt><dd><p>The user</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference internal" href="../../base/input-user.html#pyrogram.raw.base.InputUser" title="pyrogram.raw.base.InputUser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputUser</span></code></a>) – The user</p></li>
+<li><p><strong>errors</strong> (List of <a class="reference internal" href="../../base/secure-value-error.html#pyrogram.raw.base.SecureValueError" title="pyrogram.raw.base.SecureValueError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SecureValueError</span></code></a>) – Errors</p></li>
+</ul>
 </dd>
-<dt>errors (List of <a class="reference internal" href="../../base/secure-value-error.html#pyrogram.raw.base.SecureValueError" title="pyrogram.raw.base.SecureValueError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">SecureValueError</span></code></a>):</dt><dd><p>Errors</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1086,7 +1086,7 @@ Use this if the data submitted by the user doesn’t satisfy the standards your 
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

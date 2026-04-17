@@ -1023,44 +1023,37 @@
 <h1>payments.GetResaleStarGifts<a class="headerlink" href="#payments-getresalestargifts" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.payments.GetResaleStarGifts">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.payments.</span></span><span class="sig-name descname"><span class="pre">GetResaleStarGifts</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/payments/get_resale_star_gifts.py#L35-L140"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.payments.GetResaleStarGifts" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.payments.</span></span><span class="sig-name descname"><span class="pre">GetResaleStarGifts</span></span><a class="headerlink" href="#pyrogram.raw.functions.payments.GetResaleStarGifts" title="Link to this definition">¶</a></dt>
 <dd><p>Get <a class="reference external" href="https://corefork.telegram.org/api/gifts#collectible-gifts">collectible gifts</a> of a specific type currently on resale, see <a class="reference external" href="https://corefork.telegram.org/api/gifts#reselling-collectible-gifts">here</a> for more info.
 sort_by_price and sort_by_num are mutually exclusive, if neither are set results are sorted by the unixtime (descending) when their resell price was last changed.
 See <a class="reference external" href="https://corefork.telegram.org/api/gifts#sending-gifts">here</a> for detailed documentation on this method.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Users</span>
-<span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl>
+<span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
 <li><p>Layer: <code class="docutils literal notranslate"><span class="pre">224</span></code></p></li>
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">7A5FA236</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>gift_id (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>):</dt><dd><p>Mandatory identifier of the base gift from which the collectible gift was upgraded.</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gift_id</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>) – Mandatory identifier of the base gift from which the collectible gift was upgraded.</p></li>
+<li><p><strong>offset</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – Offset for pagination. If not equal to an empty string, <a class="reference external" href="https://corefork.telegram.org/constructor/payments.resaleStarGifts">payments.resaleStarGifts</a>.counters will not be set to avoid returning the counters every time a new page is fetched.</p></li>
+<li><p><strong>limit</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>) – Maximum number of results to return, <a class="reference external" href="https://corefork.telegram.org/api/offsets">see pagination</a></p></li>
+<li><p><strong>sort_by_price</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – Sort gifts by price (ascending).</p></li>
+<li><p><strong>sort_by_num</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – Sort gifts by number (ascending).</p></li>
+<li><p><strong>for_craft</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>)</p></li>
+<li><p><strong>stars_only</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>)</p></li>
+<li><p><strong>attributes_hash</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>, <em>optional</em>) – If a previous call to the method was made and <a class="reference external" href="https://corefork.telegram.org/constructor/payments.resaleStarGifts">payments.resaleStarGifts</a>.attributes_hash was set, pass it here to avoid returning any results if they haven’t changed. Otherwise, set this flag and pass 0 to return <a class="reference external" href="https://corefork.telegram.org/constructor/payments.resaleStarGifts">payments.resaleStarGifts</a>.attributes_hash and <a class="reference external" href="https://corefork.telegram.org/constructor/payments.resaleStarGifts">payments.resaleStarGifts</a>.attributes, these two fields will not be set if this flag is not set.</p></li>
+<li><p><strong>attributes</strong> (List of <a class="reference internal" href="../../base/star-gift-attribute-id.html#pyrogram.raw.base.StarGiftAttributeId" title="pyrogram.raw.base.StarGiftAttributeId"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StarGiftAttributeId</span></code></a>, <em>optional</em>) – Optionally filter gifts with the specified attributes. If no attributes of a specific type are specified, all attributes of that type are allowed.</p></li>
+</ul>
 </dd>
-<dt>offset (<code class="docutils literal notranslate"><span class="pre">str</span></code>):</dt><dd><p>Offset for pagination. If not equal to an empty string, <a class="reference external" href="https://corefork.telegram.org/constructor/payments.resaleStarGifts">payments.resaleStarGifts</a>.counters will not be set to avoid returning the counters every time a new page is fetched.</p>
-</dd>
-<dt>limit (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>):</dt><dd><p>Maximum number of results to return, <a class="reference external" href="https://corefork.telegram.org/api/offsets">see pagination</a></p>
-</dd>
-<dt>sort_by_price (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>Sort gifts by price (ascending).</p>
-</dd>
-<dt>sort_by_num (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>Sort gifts by number (ascending).</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../base/payments/resale-star-gifts.html#pyrogram.raw.base.payments.ResaleStarGifts" title="pyrogram.raw.base.payments.ResaleStarGifts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">payments.ResaleStarGifts</span></code></a></p>
 </dd>
 </dl>
-<p>for_craft (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</p>
-<p>stars_only (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</p>
-<dl class="simple">
-<dt>attributes_hash (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>, <em>optional</em>):</dt><dd><p>If a previous call to the method was made and <a class="reference external" href="https://corefork.telegram.org/constructor/payments.resaleStarGifts">payments.resaleStarGifts</a>.attributes_hash was set, pass it here to avoid returning any results if they haven’t changed. Otherwise, set this flag and pass 0 to return <a class="reference external" href="https://corefork.telegram.org/constructor/payments.resaleStarGifts">payments.resaleStarGifts</a>.attributes_hash and <a class="reference external" href="https://corefork.telegram.org/constructor/payments.resaleStarGifts">payments.resaleStarGifts</a>.attributes, these two fields will not be set if this flag is not set.</p>
-</dd>
-<dt>attributes (List of <a class="reference internal" href="../../base/star-gift-attribute-id.html#pyrogram.raw.base.StarGiftAttributeId" title="pyrogram.raw.base.StarGiftAttributeId"><code class="xref py py-obj docutils literal notranslate"><span class="pre">StarGiftAttributeId</span></code></a>, <em>optional</em>):</dt><dd><p>Optionally filter gifts with the specified attributes. If no attributes of a specific type are specified, all attributes of that type are allowed.</p>
-</dd>
-</dl>
-</dd>
-<dt>Returns:</dt><dd><p><a class="reference internal" href="../../base/payments/resale-star-gifts.html#pyrogram.raw.base.payments.ResaleStarGifts" title="pyrogram.raw.base.payments.ResaleStarGifts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">payments.ResaleStarGifts</span></code></a></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1101,7 +1094,7 @@ See <a class="reference external" href="https://corefork.telegram.org/api/gifts#
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

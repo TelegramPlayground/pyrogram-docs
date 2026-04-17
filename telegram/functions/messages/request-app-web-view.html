@@ -1023,11 +1023,10 @@
 <h1>messages.RequestAppWebView<a class="headerlink" href="#messages-requestappwebview" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.messages.RequestAppWebView">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.messages.</span></span><span class="sig-name descname"><span class="pre">RequestAppWebView</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/messages/request_app_web_view.py#L35-L133"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.messages.RequestAppWebView" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.messages.</span></span><span class="sig-name descname"><span class="pre">RequestAppWebView</span></span><a class="headerlink" href="#pyrogram.raw.functions.messages.RequestAppWebView" title="Link to this definition">¶</a></dt>
 <dd><p>Open a <a class="reference external" href="https://corefork.telegram.org/bots/webapps">bot mini app</a> from a <a class="reference external" href="https://corefork.telegram.org/api/links#direct-mini-app-links">direct Mini App deep link</a>, sending over user information after user confirmation.
 After calling this method, until the user closes the webview, <a class="reference external" href="https://corefork.telegram.org/method/messages.prolongWebView">messages.prolongWebView</a> must be called every 60 seconds.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Users</span>
 <span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
@@ -1035,29 +1034,24 @@ After calling this method, until the user closes the webview, <a class="referenc
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">53618BCE</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>peer (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>):</dt><dd><p>If the client has clicked on the link in a Telegram chat, pass the chat’s peer information; otherwise pass the bot’s peer information, instead.</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peer</strong> (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>) – If the client has clicked on the link in a Telegram chat, pass the chat’s peer information; otherwise pass the bot’s peer information, instead.</p></li>
+<li><p><strong>app</strong> (<a class="reference internal" href="../../base/input-bot-app.html#pyrogram.raw.base.InputBotApp" title="pyrogram.raw.base.InputBotApp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputBotApp</span></code></a>) – The app obtained by invoking <a class="reference external" href="https://corefork.telegram.org/method/messages.getBotApp">messages.getBotApp</a> as specified in the <a class="reference external" href="https://corefork.telegram.org/api/links#direct-mini-app-links">direct Mini App deep link</a> docs.</p></li>
+<li><p><strong>platform</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – Short name of the application; 0-64 English letters, digits, and underscores</p></li>
+<li><p><strong>write_allowed</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – Set this flag if the bot is asking permission to send messages to the user as specified in the <a class="reference external" href="https://corefork.telegram.org/api/links#direct-mini-app-links">direct Mini App deep link</a> docs, and the user agreed.</p></li>
+<li><p><strong>compact</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – If set, requests to open the mini app in compact mode (as opposed to normal or fullscreen mode). Must be set if the mode parameter of the <a class="reference external" href="https://corefork.telegram.org/api/links#direct-mini-app-links">direct Mini App deep link</a> is equal to compact.</p></li>
+<li><p><strong>fullscreen</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – If set, requests to open the mini app in fullscreen mode (as opposed to compact or normal mode). Must be set if the mode parameter of the <a class="reference external" href="https://corefork.telegram.org/api/links#direct-mini-app-links">direct Mini App deep link</a> is equal to fullscreen.</p></li>
+<li><p><strong>start_param</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>) – If the startapp query string parameter is present in the <a class="reference external" href="https://corefork.telegram.org/api/links#direct-mini-app-links">direct Mini App deep link</a>, pass it to start_param.</p></li>
+<li><p><strong>theme_params</strong> (<a class="reference internal" href="../../base/data-json.html#pyrogram.raw.base.DataJSON" title="pyrogram.raw.base.DataJSON"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataJSON</span></code></a>, <em>optional</em>) – <a class="reference external" href="https://corefork.telegram.org/api/bots/webapps#theme-parameters">Theme parameters »</a></p></li>
+</ul>
 </dd>
-<dt>app (<a class="reference internal" href="../../base/input-bot-app.html#pyrogram.raw.base.InputBotApp" title="pyrogram.raw.base.InputBotApp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputBotApp</span></code></a>):</dt><dd><p>The app obtained by invoking <a class="reference external" href="https://corefork.telegram.org/method/messages.getBotApp">messages.getBotApp</a> as specified in the <a class="reference external" href="https://corefork.telegram.org/api/links#direct-mini-app-links">direct Mini App deep link</a> docs.</p>
-</dd>
-<dt>platform (<code class="docutils literal notranslate"><span class="pre">str</span></code>):</dt><dd><p>Short name of the application; 0-64 English letters, digits, and underscores</p>
-</dd>
-<dt>write_allowed (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>Set this flag if the bot is asking permission to send messages to the user as specified in the <a class="reference external" href="https://corefork.telegram.org/api/links#direct-mini-app-links">direct Mini App deep link</a> docs, and the user agreed.</p>
-</dd>
-<dt>compact (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>If set, requests to open the mini app in compact mode (as opposed to normal or fullscreen mode). Must be set if the mode parameter of the <a class="reference external" href="https://corefork.telegram.org/api/links#direct-mini-app-links">direct Mini App deep link</a> is equal to compact.</p>
-</dd>
-<dt>fullscreen (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>If set, requests to open the mini app in fullscreen mode (as opposed to compact or normal mode). Must be set if the mode parameter of the <a class="reference external" href="https://corefork.telegram.org/api/links#direct-mini-app-links">direct Mini App deep link</a> is equal to fullscreen.</p>
-</dd>
-<dt>start_param (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>):</dt><dd><p>If the startapp query string parameter is present in the <a class="reference external" href="https://corefork.telegram.org/api/links#direct-mini-app-links">direct Mini App deep link</a>, pass it to start_param.</p>
-</dd>
-<dt>theme_params (<a class="reference internal" href="../../base/data-json.html#pyrogram.raw.base.DataJSON" title="pyrogram.raw.base.DataJSON"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataJSON</span></code></a>, <em>optional</em>):</dt><dd><p><a class="reference external" href="https://corefork.telegram.org/api/bots/webapps#theme-parameters">Theme parameters »</a></p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../base/web-view-result.html#pyrogram.raw.base.WebViewResult" title="pyrogram.raw.base.WebViewResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WebViewResult</span></code></a></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><a class="reference internal" href="../../base/web-view-result.html#pyrogram.raw.base.WebViewResult" title="pyrogram.raw.base.WebViewResult"><code class="xref py py-obj docutils literal notranslate"><span class="pre">WebViewResult</span></code></a></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1098,7 +1092,7 @@ After calling this method, until the user closes the webview, <a class="referenc
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

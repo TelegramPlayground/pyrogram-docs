@@ -1023,11 +1023,10 @@
 <h1>messages.TranslateText<a class="headerlink" href="#messages-translatetext" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.messages.TranslateText">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.messages.</span></span><span class="sig-name descname"><span class="pre">TranslateText</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/messages/translate_text.py#L35-L119"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.messages.TranslateText" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.messages.</span></span><span class="sig-name descname"><span class="pre">TranslateText</span></span><a class="headerlink" href="#pyrogram.raw.functions.messages.TranslateText" title="Link to this definition">¶</a></dt>
 <dd><p>Translate a given text.
 <a class="reference external" href="https://corefork.telegram.org/api/entities">Styled text entities</a> will only be preserved for <a class="reference external" href="https://corefork.telegram.org/api/premium">Telegram Premium</a> users.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Users</span>
 <span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
@@ -1035,23 +1034,21 @@
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">A5EEC345</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>to_lang (<code class="docutils literal notranslate"><span class="pre">str</span></code>):</dt><dd><p>Two-letter ISO 639-1 language code of the language to which the message is translated</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>to_lang</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – Two-letter ISO 639-1 language code of the language to which the message is translated</p></li>
+<li><p><strong>peer</strong> (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>, <em>optional</em>) – If the text is a chat message, the peer ID</p></li>
+<li><p><strong>id</strong> (List of <code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>, <em>optional</em>) – A list of message IDs to translate</p></li>
+<li><p><strong>text</strong> (List of <a class="reference internal" href="../../base/text-with-entities.html#pyrogram.raw.base.TextWithEntities" title="pyrogram.raw.base.TextWithEntities"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TextWithEntities</span></code></a>, <em>optional</em>) – A list of styled messages to translate</p></li>
+<li><p><strong>tone</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>)</p></li>
+</ul>
 </dd>
-<dt>peer (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>, <em>optional</em>):</dt><dd><p>If the text is a chat message, the peer ID</p>
-</dd>
-<dt>id (List of <code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>, <em>optional</em>):</dt><dd><p>A list of message IDs to translate</p>
-</dd>
-<dt>text (List of <a class="reference internal" href="../../base/text-with-entities.html#pyrogram.raw.base.TextWithEntities" title="pyrogram.raw.base.TextWithEntities"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TextWithEntities</span></code></a>, <em>optional</em>):</dt><dd><p>A list of styled messages to translate</p>
-</dd>
-<dt>tone (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>):</dt><dd><p>N/A</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../base/messages/translated-text.html#pyrogram.raw.base.messages.TranslatedText" title="pyrogram.raw.base.messages.TranslatedText"><code class="xref py py-obj docutils literal notranslate"><span class="pre">messages.TranslatedText</span></code></a></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><a class="reference internal" href="../../base/messages/translated-text.html#pyrogram.raw.base.messages.TranslatedText" title="pyrogram.raw.base.messages.TranslatedText"><code class="xref py py-obj docutils literal notranslate"><span class="pre">messages.TranslatedText</span></code></a></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1092,7 +1089,7 @@
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

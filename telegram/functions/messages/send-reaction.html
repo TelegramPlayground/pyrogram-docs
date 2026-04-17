@@ -1023,33 +1023,30 @@
 <h1>messages.SendReaction<a class="headerlink" href="#messages-sendreaction" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.messages.SendReaction">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.messages.</span></span><span class="sig-name descname"><span class="pre">SendReaction</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/messages/send_reaction.py#L35-L108"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.messages.SendReaction" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.messages.</span></span><span class="sig-name descname"><span class="pre">SendReaction</span></span><a class="headerlink" href="#pyrogram.raw.functions.messages.SendReaction" title="Link to this definition">¶</a></dt>
 <dd><p>React to message.
 Starting from layer 159, the reaction will be sent from the peer specified using <a class="reference external" href="https://corefork.telegram.org/method/messages.saveDefaultSendAs">messages.saveDefaultSendAs</a>.</p>
-<blockquote>
-<div><dl class="simple">
+<dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
 <li><p>Layer: <code class="docutils literal notranslate"><span class="pre">224</span></code></p></li>
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">D30D78D4</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>peer (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>):</dt><dd><p>Peer</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peer</strong> (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>) – Peer</p></li>
+<li><p><strong>msg_id</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>) – Message ID to react to</p></li>
+<li><p><strong>big</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – Whether a bigger and longer reaction should be shown</p></li>
+<li><p><strong>add_to_recent</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – Whether to add this reaction to the <a class="reference external" href="https://corefork.telegram.org/api/reactions#recent-reactions">recent reactions list »</a>.</p></li>
+<li><p><strong>reaction</strong> (List of <a class="reference internal" href="../../base/reaction.html#pyrogram.raw.base.Reaction" title="pyrogram.raw.base.Reaction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Reaction</span></code></a>, <em>optional</em>) – A list of reactions (doesn’t accept <a class="reference external" href="https://corefork.telegram.org/constructor/reactionPaid">reactionPaid</a> constructors, use <a class="reference external" href="https://corefork.telegram.org/method/messages.sendPaidReaction">messages.sendPaidReaction</a> to send paid reactions, instead).</p></li>
+</ul>
 </dd>
-<dt>msg_id (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>):</dt><dd><p>Message ID to react to</p>
-</dd>
-<dt>big (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>Whether a bigger and longer reaction should be shown</p>
-</dd>
-<dt>add_to_recent (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>Whether to add this reaction to the <a class="reference external" href="https://corefork.telegram.org/api/reactions#recent-reactions">recent reactions list »</a>.</p>
-</dd>
-<dt>reaction (List of <a class="reference internal" href="../../base/reaction.html#pyrogram.raw.base.Reaction" title="pyrogram.raw.base.Reaction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Reaction</span></code></a>, <em>optional</em>):</dt><dd><p>A list of reactions (doesn’t accept <a class="reference external" href="https://corefork.telegram.org/constructor/reactionPaid">reactionPaid</a> constructors, use <a class="reference external" href="https://corefork.telegram.org/method/messages.sendPaidReaction">messages.sendPaidReaction</a> to send paid reactions, instead).</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../base/updates.html#pyrogram.raw.base.Updates" title="pyrogram.raw.base.Updates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Updates</span></code></a></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><a class="reference internal" href="../../base/updates.html#pyrogram.raw.base.Updates" title="pyrogram.raw.base.Updates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Updates</span></code></a></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1090,7 +1087,7 @@ Starting from layer 159, the reaction will be sent from the peer specified using
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

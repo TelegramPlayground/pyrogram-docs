@@ -1023,11 +1023,10 @@
 <h1>account.UpdateBusinessLocation<a class="headerlink" href="#account-updatebusinesslocation" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.account.UpdateBusinessLocation">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.account.</span></span><span class="sig-name descname"><span class="pre">UpdateBusinessLocation</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/account/update_business_location.py#L35-L91"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.account.UpdateBusinessLocation" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.account.</span></span><span class="sig-name descname"><span class="pre">UpdateBusinessLocation</span></span><a class="headerlink" href="#pyrogram.raw.functions.account.UpdateBusinessLocation" title="Link to this definition">¶</a></dt>
 <dd><p><a class="reference external" href="https://corefork.telegram.org/api/business#location">Businesses</a> may advertise their location using this method, see <a class="reference external" href="https://corefork.telegram.org/api/business#location">here</a> for more info.
 To remove business location information invoke the method without setting any of the parameters.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Users</span>
 <span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
@@ -1035,17 +1034,18 @@ To remove business location information invoke the method without setting any of
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">9E6B131A</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>geo_point (<a class="reference internal" href="../../base/input-geo-point.html#pyrogram.raw.base.InputGeoPoint" title="pyrogram.raw.base.InputGeoPoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputGeoPoint</span></code></a>, <em>optional</em>):</dt><dd><p>Optional, contains a set of geographical coordinates.</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>geo_point</strong> (<a class="reference internal" href="../../base/input-geo-point.html#pyrogram.raw.base.InputGeoPoint" title="pyrogram.raw.base.InputGeoPoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputGeoPoint</span></code></a>, <em>optional</em>) – Optional, contains a set of geographical coordinates.</p></li>
+<li><p><strong>address</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>) – Mandatory when setting/updating the location, contains a textual description of the address (max 96 UTF-8 chars).</p></li>
+</ul>
 </dd>
-<dt>address (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>):</dt><dd><p>Mandatory when setting/updating the location, contains a textual description of the address (max 96 UTF-8 chars).</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1086,7 +1086,7 @@ To remove business location information invoke the method without setting any of
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

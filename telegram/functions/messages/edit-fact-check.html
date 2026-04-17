@@ -1023,11 +1023,10 @@
 <h1>messages.EditFactCheck<a class="headerlink" href="#messages-editfactcheck" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.messages.EditFactCheck">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.messages.</span></span><span class="sig-name descname"><span class="pre">EditFactCheck</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/messages/edit_fact_check.py#L35-L94"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.messages.EditFactCheck" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.messages.</span></span><span class="sig-name descname"><span class="pre">EditFactCheck</span></span><a class="headerlink" href="#pyrogram.raw.functions.messages.EditFactCheck" title="Link to this definition">¶</a></dt>
 <dd><p>Edit/create a <a class="reference external" href="https://corefork.telegram.org/api/factcheck">fact-check</a> on a message.
 Can only be used by independent fact-checkers as specified by the <a class="reference external" href="https://corefork.telegram.org/api/config#can-edit-factcheck">appConfig.can_edit_factcheck</a> configuration flag.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Users</span>
 <span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
@@ -1035,19 +1034,19 @@ Can only be used by independent fact-checkers as specified by the <a class="refe
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">589EE75</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>peer (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>):</dt><dd><p>Peer where the message was sent</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peer</strong> (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>) – Peer where the message was sent</p></li>
+<li><p><strong>msg_id</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>) – Message ID</p></li>
+<li><p><strong>text</strong> (<a class="reference internal" href="../../base/text-with-entities.html#pyrogram.raw.base.TextWithEntities" title="pyrogram.raw.base.TextWithEntities"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TextWithEntities</span></code></a>) – Fact-check (maximum UTF-8 length specified in <a class="reference external" href="https://corefork.telegram.org/api/config#factcheck-length-limit">appConfig.factcheck_length_limit</a>).</p></li>
+</ul>
 </dd>
-<dt>msg_id (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>):</dt><dd><p>Message ID</p>
-</dd>
-<dt>text (<a class="reference internal" href="../../base/text-with-entities.html#pyrogram.raw.base.TextWithEntities" title="pyrogram.raw.base.TextWithEntities"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TextWithEntities</span></code></a>):</dt><dd><p>Fact-check (maximum UTF-8 length specified in <a class="reference external" href="https://corefork.telegram.org/api/config#factcheck-length-limit">appConfig.factcheck_length_limit</a>).</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../base/updates.html#pyrogram.raw.base.Updates" title="pyrogram.raw.base.Updates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Updates</span></code></a></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><a class="reference internal" href="../../base/updates.html#pyrogram.raw.base.Updates" title="pyrogram.raw.base.Updates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Updates</span></code></a></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1088,7 +1087,7 @@ Can only be used by independent fact-checkers as specified by the <a class="refe
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

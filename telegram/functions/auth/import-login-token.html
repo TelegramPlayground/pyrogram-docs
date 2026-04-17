@@ -1023,27 +1023,30 @@
 <h1>auth.ImportLoginToken<a class="headerlink" href="#auth-importlogintoken" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.auth.ImportLoginToken">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.auth.</span></span><span class="sig-name descname"><span class="pre">ImportLoginToken</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/auth/import_login_token.py#L35-L78"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.auth.ImportLoginToken" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.auth.</span></span><span class="sig-name descname"><span class="pre">ImportLoginToken</span></span><a class="headerlink" href="#pyrogram.raw.functions.auth.ImportLoginToken" title="Link to this definition">¶</a></dt>
 <dd><p>Login using a redirected login token, generated in case of DC mismatch during <a class="reference external" href="https://corefork.telegram.org/api/qr-login">QR code login</a>.
 For more info, see <a class="reference external" href="https://corefork.telegram.org/api/qr-login">login via QR code</a>.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Users</span>
-<span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl class="simple">
+<span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method can be used by not yet logged in connections.</p>
+</div>
+<dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
 <li><p>Layer: <code class="docutils literal notranslate"><span class="pre">224</span></code></p></li>
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">95AC5CE4</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>token (<code class="docutils literal notranslate"><span class="pre">bytes</span></code>):</dt><dd><p>Login token</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>token</strong> (<code class="docutils literal notranslate"><span class="pre">bytes</span></code>) – Login token</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../base/auth/login-token.html#pyrogram.raw.base.auth.LoginToken" title="pyrogram.raw.base.auth.LoginToken"><code class="xref py py-obj docutils literal notranslate"><span class="pre">auth.LoginToken</span></code></a></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><a class="reference internal" href="../../base/auth/login-token.html#pyrogram.raw.base.auth.LoginToken" title="pyrogram.raw.base.auth.LoginToken"><code class="xref py py-obj docutils literal notranslate"><span class="pre">auth.LoginToken</span></code></a></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1084,7 +1087,7 @@ For more info, see <a class="reference external" href="https://corefork.telegram
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

@@ -1023,11 +1023,10 @@
 <h1>stats.GetMessagePublicForwards<a class="headerlink" href="#stats-getmessagepublicforwards" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.stats.GetMessagePublicForwards">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.stats.</span></span><span class="sig-name descname"><span class="pre">GetMessagePublicForwards</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/stats/get_message_public_forwards.py#L35-L102"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.stats.GetMessagePublicForwards" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.stats.</span></span><span class="sig-name descname"><span class="pre">GetMessagePublicForwards</span></span><a class="headerlink" href="#pyrogram.raw.functions.stats.GetMessagePublicForwards" title="Link to this definition">¶</a></dt>
 <dd><p>Obtains a list of messages, indicating to which other public channels was a channel message forwarded.
 Will return a list of <a class="reference external" href="https://corefork.telegram.org/constructor/message">messages</a> with peer_id equal to the public channel to which this message was forwarded.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Users</span>
 <span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
@@ -1035,21 +1034,20 @@ Will return a list of <a class="reference external" href="https://corefork.teleg
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">5F150144</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>channel (<a class="reference internal" href="../../base/input-channel.html#pyrogram.raw.base.InputChannel" title="pyrogram.raw.base.InputChannel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputChannel</span></code></a>):</dt><dd><p>Source channel</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> (<a class="reference internal" href="../../base/input-channel.html#pyrogram.raw.base.InputChannel" title="pyrogram.raw.base.InputChannel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputChannel</span></code></a>) – Source channel</p></li>
+<li><p><strong>msg_id</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>) – Source message ID</p></li>
+<li><p><strong>offset</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – Offset for <a class="reference external" href="https://corefork.telegram.org/api/offsets">pagination</a>, empty string on first call, then use the next_offset field of the returned constructor (if present, otherwise no more results are available).</p></li>
+<li><p><strong>limit</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>) – Maximum number of results to return, <a class="reference external" href="https://corefork.telegram.org/api/offsets">see pagination</a></p></li>
+</ul>
 </dd>
-<dt>msg_id (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>):</dt><dd><p>Source message ID</p>
-</dd>
-<dt>offset (<code class="docutils literal notranslate"><span class="pre">str</span></code>):</dt><dd><p>Offset for <a class="reference external" href="https://corefork.telegram.org/api/offsets">pagination</a>, empty string on first call, then use the next_offset field of the returned constructor (if present, otherwise no more results are available).</p>
-</dd>
-<dt>limit (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>):</dt><dd><p>Maximum number of results to return, <a class="reference external" href="https://corefork.telegram.org/api/offsets">see pagination</a></p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../base/stats/public-forwards.html#pyrogram.raw.base.stats.PublicForwards" title="pyrogram.raw.base.stats.PublicForwards"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stats.PublicForwards</span></code></a></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><a class="reference internal" href="../../base/stats/public-forwards.html#pyrogram.raw.base.stats.PublicForwards" title="pyrogram.raw.base.stats.PublicForwards"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stats.PublicForwards</span></code></a></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1090,7 +1088,7 @@ Will return a list of <a class="reference external" href="https://corefork.teleg
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

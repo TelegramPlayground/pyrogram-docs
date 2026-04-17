@@ -1023,11 +1023,10 @@
 <h1>messages.StartHistoryImport<a class="headerlink" href="#messages-starthistoryimport" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.messages.StartHistoryImport">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.messages.</span></span><span class="sig-name descname"><span class="pre">StartHistoryImport</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/messages/start_history_import.py#L35-L86"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.messages.StartHistoryImport" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.messages.</span></span><span class="sig-name descname"><span class="pre">StartHistoryImport</span></span><a class="headerlink" href="#pyrogram.raw.functions.messages.StartHistoryImport" title="Link to this definition">¶</a></dt>
 <dd><p>Complete the <a class="reference external" href="https://corefork.telegram.org/api/import">history import process</a>, importing all messages into the chat.
 To be called only after initializing the import with <a class="reference external" href="https://corefork.telegram.org/method/messages.initHistoryImport">messages.initHistoryImport</a> and uploading all files using <a class="reference external" href="https://corefork.telegram.org/method/messages.uploadImportedMedia">messages.uploadImportedMedia</a>.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Users</span>
 <span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
@@ -1035,17 +1034,18 @@ To be called only after initializing the import with <a class="reference externa
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">B43DF344</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>peer (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>):</dt><dd><p>The Telegram chat where the messages should be <a class="reference external" href="https://corefork.telegram.org/api/import">imported, click here for more info »</a></p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peer</strong> (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>) – The Telegram chat where the messages should be <a class="reference external" href="https://corefork.telegram.org/api/import">imported, click here for more info »</a></p></li>
+<li><p><strong>import_id</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>) – Identifier of a history import session, returned by <a class="reference external" href="https://corefork.telegram.org/method/messages.initHistoryImport">messages.initHistoryImport</a>.</p></li>
+</ul>
 </dd>
-<dt>import_id (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>):</dt><dd><p>Identifier of a history import session, returned by <a class="reference external" href="https://corefork.telegram.org/method/messages.initHistoryImport">messages.initHistoryImport</a>.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1086,7 +1086,7 @@ To be called only after initializing the import with <a class="reference externa
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

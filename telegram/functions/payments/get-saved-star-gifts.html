@@ -1023,49 +1023,42 @@
 <h1>payments.GetSavedStarGifts<a class="headerlink" href="#payments-getsavedstargifts" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.payments.GetSavedStarGifts">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.payments.</span></span><span class="sig-name descname"><span class="pre">GetSavedStarGifts</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/payments/get_saved_star_gifts.py#L35-L157"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.payments.GetSavedStarGifts" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.payments.</span></span><span class="sig-name descname"><span class="pre">GetSavedStarGifts</span></span><a class="headerlink" href="#pyrogram.raw.functions.payments.GetSavedStarGifts" title="Link to this definition">¶</a></dt>
 <dd><p>Fetch the full list of <a class="reference external" href="https://corefork.telegram.org/api/gifts">gifts</a> owned by a peer.
 Note that unlike what the name suggests, the method can be used to fetch both “saved” and “unsaved” gifts (aka gifts both pinned and not pinned) to the profile, depending on the passed flags.</p>
-<blockquote>
-<div><dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method can be invoked over a <a class="reference external" href="https://corefork.telegram.org/api/bots/connected-business-bots">business connection »</a></p>
+</div>
+<dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
 <li><p>Layer: <code class="docutils literal notranslate"><span class="pre">224</span></code></p></li>
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">A319E569</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>peer (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>):</dt><dd><p>Fetch only gifts owned by the specified peer, such as: a user, with peer=`inputPeerUser &lt;<a class="reference external" href="https://corefork.telegram.org/constructor/inputPeerUser">https://corefork.telegram.org/constructor/inputPeerUser</a>&gt;`__; a channel, with peer=`inputPeerChannel &lt;<a class="reference external" href="https://corefork.telegram.org/constructor/inputPeerChannel">https://corefork.telegram.org/constructor/inputPeerChannel</a>&gt;`__; a <a class="reference external" href="https://corefork.telegram.org/api/bots/connected-business-bots">connected business user</a> (when executing the method as a bot, over the business connection), with peer=`inputPeerUser &lt;<a class="reference external" href="https://corefork.telegram.org/constructor/inputPeerUser">https://corefork.telegram.org/constructor/inputPeerUser</a>&gt;`__.</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peer</strong> (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>) – Fetch only gifts owned by the specified peer, such as: a user, with peer=`inputPeerUser &lt;<a class="reference external" href="https://corefork.telegram.org/constructor/inputPeerUser">https://corefork.telegram.org/constructor/inputPeerUser</a>&gt;`__; a channel, with peer=`inputPeerChannel &lt;<a class="reference external" href="https://corefork.telegram.org/constructor/inputPeerChannel">https://corefork.telegram.org/constructor/inputPeerChannel</a>&gt;`__; a <a class="reference external" href="https://corefork.telegram.org/api/bots/connected-business-bots">connected business user</a> (when executing the method as a bot, over the business connection), with peer=`inputPeerUser &lt;<a class="reference external" href="https://corefork.telegram.org/constructor/inputPeerUser">https://corefork.telegram.org/constructor/inputPeerUser</a>&gt;`__.</p></li>
+<li><p><strong>offset</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – <a class="reference external" href="https://corefork.telegram.org/api/offsets">Offset for pagination</a>.</p></li>
+<li><p><strong>limit</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>) – Maximum number of results to return, <a class="reference external" href="https://corefork.telegram.org/api/offsets">see pagination</a></p></li>
+<li><p><strong>exclude_unsaved</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – Exclude gifts not pinned on the profile.</p></li>
+<li><p><strong>exclude_saved</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – Exclude gifts pinned on the profile.</p></li>
+<li><p><strong>exclude_unlimited</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – Exclude gifts that do not have the <a class="reference external" href="https://corefork.telegram.org/constructor/starGift">starGift</a>.limited flag set.</p></li>
+<li><p><strong>exclude_unique</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – Exclude <a class="reference external" href="https://corefork.telegram.org/api/gifts#collectible-gifts">collectible gifts »</a>.</p></li>
+<li><p><strong>sort_by_value</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – If set, sorts the gifts by price instead of reception date.</p></li>
+<li><p><strong>exclude_upgradable</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – Exclude gifts that can be <a class="reference external" href="https://corefork.telegram.org/api/gifts#collectible-gifts">upgraded to collectible gifts »</a>.</p></li>
+<li><p><strong>exclude_unupgradable</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – Exclude gifts that cannot be <a class="reference external" href="https://corefork.telegram.org/api/gifts#collectible-gifts">upgraded to collectible gifts »</a>.</p></li>
+<li><p><strong>peer_color_available</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>)</p></li>
+<li><p><strong>exclude_hosted</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>)</p></li>
+<li><p><strong>collection_id</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>, <em>optional</em>) – Only returns gifts within the specified <a class="reference external" href="https://corefork.telegram.org/api/gifts#gift-collections">collection »</a>.</p></li>
+</ul>
 </dd>
-<dt>offset (<code class="docutils literal notranslate"><span class="pre">str</span></code>):</dt><dd><p><a class="reference external" href="https://corefork.telegram.org/api/offsets">Offset for pagination</a>.</p>
-</dd>
-<dt>limit (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>):</dt><dd><p>Maximum number of results to return, <a class="reference external" href="https://corefork.telegram.org/api/offsets">see pagination</a></p>
-</dd>
-<dt>exclude_unsaved (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>Exclude gifts not pinned on the profile.</p>
-</dd>
-<dt>exclude_saved (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>Exclude gifts pinned on the profile.</p>
-</dd>
-<dt>exclude_unlimited (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>Exclude gifts that do not have the <a class="reference external" href="https://corefork.telegram.org/constructor/starGift">starGift</a>.limited flag set.</p>
-</dd>
-<dt>exclude_unique (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>Exclude <a class="reference external" href="https://corefork.telegram.org/api/gifts#collectible-gifts">collectible gifts »</a>.</p>
-</dd>
-<dt>sort_by_value (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>If set, sorts the gifts by price instead of reception date.</p>
-</dd>
-<dt>exclude_upgradable (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>Exclude gifts that can be <a class="reference external" href="https://corefork.telegram.org/api/gifts#collectible-gifts">upgraded to collectible gifts »</a>.</p>
-</dd>
-<dt>exclude_unupgradable (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>Exclude gifts that cannot be <a class="reference external" href="https://corefork.telegram.org/api/gifts#collectible-gifts">upgraded to collectible gifts »</a>.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../base/payments/saved-star-gifts.html#pyrogram.raw.base.payments.SavedStarGifts" title="pyrogram.raw.base.payments.SavedStarGifts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">payments.SavedStarGifts</span></code></a></p>
 </dd>
 </dl>
-<p>peer_color_available (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</p>
-<p>exclude_hosted (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</p>
-<dl class="simple">
-<dt>collection_id (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>, <em>optional</em>):</dt><dd><p>Only returns gifts within the specified <a class="reference external" href="https://corefork.telegram.org/api/gifts#gift-collections">collection »</a>.</p>
-</dd>
-</dl>
-</dd>
-<dt>Returns:</dt><dd><p><a class="reference internal" href="../../base/payments/saved-star-gifts.html#pyrogram.raw.base.payments.SavedStarGifts" title="pyrogram.raw.base.payments.SavedStarGifts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">payments.SavedStarGifts</span></code></a></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1106,7 +1099,7 @@ Note that unlike what the name suggests, the method can be used to fetch both �
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

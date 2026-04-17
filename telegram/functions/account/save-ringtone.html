@@ -1023,12 +1023,11 @@
 <h1>account.SaveRingtone<a class="headerlink" href="#account-saveringtone" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.account.SaveRingtone">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.account.</span></span><span class="sig-name descname"><span class="pre">SaveRingtone</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/account/save_ringtone.py#L35-L87"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.account.SaveRingtone" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.account.</span></span><span class="sig-name descname"><span class="pre">SaveRingtone</span></span><a class="headerlink" href="#pyrogram.raw.functions.account.SaveRingtone" title="Link to this definition">¶</a></dt>
 <dd><p>Save or remove saved notification sound.
 If the notification sound is already in MP3 format, <a class="reference external" href="https://corefork.telegram.org/constructor/account.savedRingtone">account.savedRingtone</a> will be returned.
 Otherwise, it will be automatically converted and a <a class="reference external" href="https://corefork.telegram.org/constructor/account.savedRingtoneConverted">account.savedRingtoneConverted</a> will be returned, containing a new <a class="reference external" href="https://corefork.telegram.org/constructor/document">document</a> object that should be used to refer to the ringtone from now on (ie when deleting it using the unsave parameter, or when downloading it).</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Users</span>
 <span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
@@ -1036,17 +1035,18 @@ Otherwise, it will be automatically converted and a <a class="reference external
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">3DEA5B03</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>id (<a class="reference internal" href="../../base/input-document.html#pyrogram.raw.base.InputDocument" title="pyrogram.raw.base.InputDocument"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputDocument</span></code></a>):</dt><dd><p>Notification sound uploaded using <a class="reference external" href="https://corefork.telegram.org/method/account.uploadRingtone">account.uploadRingtone</a></p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference internal" href="../../base/input-document.html#pyrogram.raw.base.InputDocument" title="pyrogram.raw.base.InputDocument"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputDocument</span></code></a>) – Notification sound uploaded using <a class="reference external" href="https://corefork.telegram.org/method/account.uploadRingtone">account.uploadRingtone</a></p></li>
+<li><p><strong>unsave</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) – Whether to add or delete the notification sound</p></li>
+</ul>
 </dd>
-<dt>unsave (<code class="docutils literal notranslate"><span class="pre">bool</span></code>):</dt><dd><p>Whether to add or delete the notification sound</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../base/account/saved-ringtone.html#pyrogram.raw.base.account.SavedRingtone" title="pyrogram.raw.base.account.SavedRingtone"><code class="xref py py-obj docutils literal notranslate"><span class="pre">account.SavedRingtone</span></code></a></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><a class="reference internal" href="../../base/account/saved-ringtone.html#pyrogram.raw.base.account.SavedRingtone" title="pyrogram.raw.base.account.SavedRingtone"><code class="xref py py-obj docutils literal notranslate"><span class="pre">account.SavedRingtone</span></code></a></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1087,7 +1087,7 @@ Otherwise, it will be automatically converted and a <a class="reference external
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

@@ -1023,12 +1023,11 @@
 <h1>messages.SetBotPrecheckoutResults<a class="headerlink" href="#messages-setbotprecheckoutresults" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.messages.SetBotPrecheckoutResults">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.messages.</span></span><span class="sig-name descname"><span class="pre">SetBotPrecheckoutResults</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/messages/set_bot_precheckout_results.py#L35-L96"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.messages.SetBotPrecheckoutResults" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.messages.</span></span><span class="sig-name descname"><span class="pre">SetBotPrecheckoutResults</span></span><a class="headerlink" href="#pyrogram.raw.functions.messages.SetBotPrecheckoutResults" title="Link to this definition">¶</a></dt>
 <dd><p>Once the user has confirmed their payment and shipping details, the bot receives an <a class="reference external" href="https://corefork.telegram.org/constructor/updateBotPrecheckoutQuery">updateBotPrecheckoutQuery</a> update.
 Use this method to respond to such pre-checkout queries.
 Note: Telegram must receive an answer within 10 seconds after the pre-checkout query was sent.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Users</span>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Bots</span><dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
@@ -1036,19 +1035,19 @@ Note: Telegram must receive an answer within 10 seconds after the pre-checkout q
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">9C2DD95</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>query_id (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>):</dt><dd><p>Unique identifier for the query to be answered</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>query_id</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>) – Unique identifier for the query to be answered</p></li>
+<li><p><strong>success</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – Set this flag if everything is alright (goods are available, etc.) and the bot is ready to proceed with the order, otherwise do not set it, and set the error field, instead</p></li>
+<li><p><strong>error</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>) – Required if the success isn’t set. Error message in human readable form that explains the reason for failure to proceed with the checkout (e.g. “Sorry, somebody just bought the last of our amazing black T-shirts while you were busy filling out your payment details. Please choose a different color or garment!”). Telegram will display this message to the user.</p></li>
+</ul>
 </dd>
-<dt>success (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>Set this flag if everything is alright (goods are available, etc.) and the bot is ready to proceed with the order, otherwise do not set it, and set the error field, instead</p>
-</dd>
-<dt>error (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>):</dt><dd><p>Required if the success isn’t set. Error message in human readable form that explains the reason for failure to proceed with the checkout (e.g. “Sorry, somebody just bought the last of our amazing black T-shirts while you were busy filling out your payment details. Please choose a different color or garment!”). Telegram will display this message to the user.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1089,7 +1088,7 @@ Note: Telegram must receive an answer within 10 seconds after the pre-checkout q
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

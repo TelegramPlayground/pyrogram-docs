@@ -1023,39 +1023,33 @@
 <h1>payments.GetStarsTransactions<a class="headerlink" href="#payments-getstarstransactions" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.payments.GetStarsTransactions">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.payments.</span></span><span class="sig-name descname"><span class="pre">GetStarsTransactions</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/payments/get_stars_transactions.py#L35-L127"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.payments.GetStarsTransactions" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.payments.</span></span><span class="sig-name descname"><span class="pre">GetStarsTransactions</span></span><a class="headerlink" href="#pyrogram.raw.functions.payments.GetStarsTransactions" title="Link to this definition">¶</a></dt>
 <dd><p>Fetch <a class="reference external" href="https://corefork.telegram.org/api/stars#balance-and-transaction-history">Telegram Stars transactions</a>.
 The inbound and outbound flags are mutually exclusive: if none of the two are set, both incoming and outgoing transactions are fetched.</p>
-<blockquote>
-<div><dl class="simple">
+<dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
 <li><p>Layer: <code class="docutils literal notranslate"><span class="pre">224</span></code></p></li>
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">69DA4557</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>peer (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>):</dt><dd><p>Fetch the transaction history of the peer (<a class="reference external" href="https://corefork.telegram.org/constructor/inputPeerSelf">inputPeerSelf</a> or a bot we own).</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peer</strong> (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>) – Fetch the transaction history of the peer (<a class="reference external" href="https://corefork.telegram.org/constructor/inputPeerSelf">inputPeerSelf</a> or a bot we own).</p></li>
+<li><p><strong>offset</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – <a class="reference external" href="https://corefork.telegram.org/api/offsets">Offset for pagination, obtained from the returned next_offset, initially an empty string »</a>.</p></li>
+<li><p><strong>limit</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>) – Maximum number of results to return, <a class="reference external" href="https://corefork.telegram.org/api/offsets">see pagination</a></p></li>
+<li><p><strong>inbound</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – If set, fetches only incoming transactions.</p></li>
+<li><p><strong>outbound</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – If set, fetches only outgoing transactions.</p></li>
+<li><p><strong>ascending</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – Return transactions in ascending order by date (instead of descending order by date).</p></li>
+<li><p><strong>ton</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – If set, returns the channel/ad revenue transactions in nanotons, instead.</p></li>
+<li><p><strong>subscription_id</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>) – If set, fetches only transactions for the specified <a class="reference external" href="https://corefork.telegram.org/api/stars#star-subscriptions">Telegram Star subscription »</a>.</p></li>
+</ul>
 </dd>
-<dt>offset (<code class="docutils literal notranslate"><span class="pre">str</span></code>):</dt><dd><p><a class="reference external" href="https://corefork.telegram.org/api/offsets">Offset for pagination, obtained from the returned next_offset, initially an empty string »</a>.</p>
-</dd>
-<dt>limit (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>):</dt><dd><p>Maximum number of results to return, <a class="reference external" href="https://corefork.telegram.org/api/offsets">see pagination</a></p>
-</dd>
-<dt>inbound (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>If set, fetches only incoming transactions.</p>
-</dd>
-<dt>outbound (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>If set, fetches only outgoing transactions.</p>
-</dd>
-<dt>ascending (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>Return transactions in ascending order by date (instead of descending order by date).</p>
-</dd>
-<dt>ton (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>If set, returns the channel/ad revenue transactions in nanotons, instead.</p>
-</dd>
-<dt>subscription_id (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>):</dt><dd><p>If set, fetches only transactions for the specified <a class="reference external" href="https://corefork.telegram.org/api/stars#star-subscriptions">Telegram Star subscription »</a>.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../base/payments/stars-status.html#pyrogram.raw.base.payments.StarsStatus" title="pyrogram.raw.base.payments.StarsStatus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">payments.StarsStatus</span></code></a></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><a class="reference internal" href="../../base/payments/stars-status.html#pyrogram.raw.base.payments.StarsStatus" title="pyrogram.raw.base.payments.StarsStatus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">payments.StarsStatus</span></code></a></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1096,7 +1090,7 @@ The inbound and outbound flags are mutually exclusive: if none of the two are se
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

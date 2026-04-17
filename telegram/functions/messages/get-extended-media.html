@@ -1023,12 +1023,11 @@
 <h1>messages.GetExtendedMedia<a class="headerlink" href="#messages-getextendedmedia" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.messages.GetExtendedMedia">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.messages.</span></span><span class="sig-name descname"><span class="pre">GetExtendedMedia</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/messages/get_extended_media.py#L35-L87"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.messages.GetExtendedMedia" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.messages.</span></span><span class="sig-name descname"><span class="pre">GetExtendedMedia</span></span><a class="headerlink" href="#pyrogram.raw.functions.messages.GetExtendedMedia" title="Link to this definition">¶</a></dt>
 <dd><p>Fetch updated information about <a class="reference external" href="https://corefork.telegram.org/api/paid-media">paid media, see here</a> for the full flow.
 This method will return an array of <a class="reference external" href="https://corefork.telegram.org/constructor/updateMessageExtendedMedia">updateMessageExtendedMedia</a> updates, only for messages containing already bought paid media.
 No information will be returned for messages containing not yet bought paid media.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Users</span>
 <span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
@@ -1036,17 +1035,18 @@ No information will be returned for messages containing not yet bought paid medi
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">84F80814</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>peer (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>):</dt><dd><p>Peer with visible paid media messages.</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peer</strong> (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>) – Peer with visible paid media messages.</p></li>
+<li><p><strong>id</strong> (List of <code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>) – IDs of currently visible messages containing paid media.</p></li>
+</ul>
 </dd>
-<dt>id (List of <code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>):</dt><dd><p>IDs of currently visible messages containing paid media.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../base/updates.html#pyrogram.raw.base.Updates" title="pyrogram.raw.base.Updates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Updates</span></code></a></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><a class="reference internal" href="../../base/updates.html#pyrogram.raw.base.Updates" title="pyrogram.raw.base.Updates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Updates</span></code></a></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1087,7 +1087,7 @@ No information will be returned for messages containing not yet bought paid medi
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

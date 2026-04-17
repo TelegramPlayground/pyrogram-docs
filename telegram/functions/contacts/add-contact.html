@@ -1023,11 +1023,10 @@
 <h1>contacts.AddContact<a class="headerlink" href="#contacts-addcontact" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.contacts.AddContact">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.contacts.</span></span><span class="sig-name descname"><span class="pre">AddContact</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/contacts/add_contact.py#L35-L120"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.contacts.AddContact" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.contacts.</span></span><span class="sig-name descname"><span class="pre">AddContact</span></span><a class="headerlink" href="#pyrogram.raw.functions.contacts.AddContact" title="Link to this definition">¶</a></dt>
 <dd><p>Add an existing telegram user as contact.
 Use <a class="reference external" href="https://corefork.telegram.org/method/contacts.importContacts">contacts.importContacts</a> to add contacts by phone number, without knowing their Telegram ID.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Users</span>
 <span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
@@ -1035,25 +1034,22 @@ Use <a class="reference external" href="https://corefork.telegram.org/method/con
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">D9BA2E54</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>id (<a class="reference internal" href="../../base/input-user.html#pyrogram.raw.base.InputUser" title="pyrogram.raw.base.InputUser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputUser</span></code></a>):</dt><dd><p>Telegram ID of the other user</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<a class="reference internal" href="../../base/input-user.html#pyrogram.raw.base.InputUser" title="pyrogram.raw.base.InputUser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputUser</span></code></a>) – Telegram ID of the other user</p></li>
+<li><p><strong>first_name</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – First name</p></li>
+<li><p><strong>last_name</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – Last name</p></li>
+<li><p><strong>phone</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – User’s phone number, may be omitted to simply add the user to the contact list, without a phone number.</p></li>
+<li><p><strong>add_phone_privacy_exception</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – Allow the other user to see our phone number?</p></li>
+<li><p><strong>note</strong> (<a class="reference internal" href="../../base/text-with-entities.html#pyrogram.raw.base.TextWithEntities" title="pyrogram.raw.base.TextWithEntities"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TextWithEntities</span></code></a>, <em>optional</em>) – A private note for this contact, only visible to us; see <a class="reference external" href="https://corefork.telegram.org/api/profile#private-notes-for-contacts">here »</a> for more info on contact notes.</p></li>
+</ul>
 </dd>
-<dt>first_name (<code class="docutils literal notranslate"><span class="pre">str</span></code>):</dt><dd><p>First name</p>
-</dd>
-<dt>last_name (<code class="docutils literal notranslate"><span class="pre">str</span></code>):</dt><dd><p>Last name</p>
-</dd>
-<dt>phone (<code class="docutils literal notranslate"><span class="pre">str</span></code>):</dt><dd><p>User’s phone number, may be omitted to simply add the user to the contact list, without a phone number.</p>
-</dd>
-<dt>add_phone_privacy_exception (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>Allow the other user to see our phone number?</p>
-</dd>
-<dt>note (<a class="reference internal" href="../../base/text-with-entities.html#pyrogram.raw.base.TextWithEntities" title="pyrogram.raw.base.TextWithEntities"><code class="xref py py-obj docutils literal notranslate"><span class="pre">TextWithEntities</span></code></a>, <em>optional</em>):</dt><dd><p>A private note for this contact, only visible to us; see <a class="reference external" href="https://corefork.telegram.org/api/profile#private-notes-for-contacts">here »</a> for more info on contact notes.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../base/updates.html#pyrogram.raw.base.Updates" title="pyrogram.raw.base.Updates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Updates</span></code></a></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><a class="reference internal" href="../../base/updates.html#pyrogram.raw.base.Updates" title="pyrogram.raw.base.Updates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Updates</span></code></a></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1094,7 +1090,7 @@ Use <a class="reference external" href="https://corefork.telegram.org/method/con
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

@@ -1023,29 +1023,33 @@
 <h1>account.DeleteAccount<a class="headerlink" href="#account-deleteaccount" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.account.DeleteAccount">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.account.</span></span><span class="sig-name descname"><span class="pre">DeleteAccount</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/account/delete_account.py#L35-L90"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.account.DeleteAccount" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.account.</span></span><span class="sig-name descname"><span class="pre">DeleteAccount</span></span><a class="headerlink" href="#pyrogram.raw.functions.account.DeleteAccount" title="Link to this definition">¶</a></dt>
 <dd><p>Delete the user’s account from the telegram servers.
 Can also be used to delete the account of a user that provided the login code, but forgot the 2FA password and no recovery method is configured, see <a class="reference external" href="https://corefork.telegram.org/api/srp#password-recovery">here</a> for more info on password recovery, and <a class="reference external" href="https://corefork.telegram.org/api/account-deletion">here</a> for more info on account deletion.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Users</span>
-<span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl class="simple">
+<span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method can be used by not yet logged in connections.</p>
+</div>
+<dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
 <li><p>Layer: <code class="docutils literal notranslate"><span class="pre">224</span></code></p></li>
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">A2C0CF74</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>reason (<code class="docutils literal notranslate"><span class="pre">str</span></code>):</dt><dd><p>Why is the account being deleted, can be empty</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>reason</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – Why is the account being deleted, can be empty</p></li>
+<li><p><strong>password</strong> (<a class="reference internal" href="../../base/input-check-password-srp.html#pyrogram.raw.base.InputCheckPasswordSRP" title="pyrogram.raw.base.InputCheckPasswordSRP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputCheckPasswordSRP</span></code></a>, <em>optional</em>) – <a class="reference external" href="https://corefork.telegram.org/api/srp">2FA password</a>: this field can be omitted even for accounts with 2FA enabled: in this case account account deletion will be delayed by 7 days <a class="reference external" href="https://corefork.telegram.org/api/account-deletion">as specified in the docs »</a></p></li>
+</ul>
 </dd>
-<dt>password (<a class="reference internal" href="../../base/input-check-password-srp.html#pyrogram.raw.base.InputCheckPasswordSRP" title="pyrogram.raw.base.InputCheckPasswordSRP"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputCheckPasswordSRP</span></code></a>, <em>optional</em>):</dt><dd><p><a class="reference external" href="https://corefork.telegram.org/api/srp">2FA password</a>: this field can be omitted even for accounts with 2FA enabled: in this case account account deletion will be delayed by 7 days <a class="reference external" href="https://corefork.telegram.org/api/account-deletion">as specified in the docs »</a></p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1086,7 +1090,7 @@ Can also be used to delete the account of a user that provided the login code, b
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

@@ -1023,14 +1023,13 @@
 <h1>messages.GetOutboxReadDate<a class="headerlink" href="#messages-getoutboxreaddate" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.messages.GetOutboxReadDate">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.messages.</span></span><span class="sig-name descname"><span class="pre">GetOutboxReadDate</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/messages/get_outbox_read_date.py#L35-L89"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.messages.GetOutboxReadDate" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.messages.</span></span><span class="sig-name descname"><span class="pre">GetOutboxReadDate</span></span><a class="headerlink" href="#pyrogram.raw.functions.messages.GetOutboxReadDate" title="Link to this definition">¶</a></dt>
 <dd><p>Get the exact read date of one of our messages, sent to a private chat with another user.
 Can be only done for private outgoing messages not older than <a class="reference external" href="https://corefork.telegram.org/api/config#pm-read-date-expire-period">appConfig.pm_read_date_expire_period</a>.
 If the peer’s <a class="reference external" href="https://corefork.telegram.org/constructor/userFull">userFull</a>.read_dates_private flag is set, we will not be able to fetch the exact read date of messages we send to them, and a USER_PRIVACY_RESTRICTED RPC error will be emitted.
 The exact read date of messages might still be unavailable for other reasons, see <a class="reference external" href="https://corefork.telegram.org/constructor/globalPrivacySettings">here</a> for more info.
 To set <a class="reference external" href="https://corefork.telegram.org/constructor/userFull">userFull</a>.read_dates_private for ourselves invoke <a class="reference external" href="https://corefork.telegram.org/method/account.setGlobalPrivacySettings">account.setGlobalPrivacySettings</a>, setting the settings.hide_read_marks flag.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Users</span>
 <span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
@@ -1038,17 +1037,18 @@ To set <a class="reference external" href="https://corefork.telegram.org/constru
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">8C4BFE5D</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>peer (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>):</dt><dd><p>The user to whom we sent the message.</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peer</strong> (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>) – The user to whom we sent the message.</p></li>
+<li><p><strong>msg_id</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>) – The message ID.</p></li>
+</ul>
 </dd>
-<dt>msg_id (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>):</dt><dd><p>The message ID.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../base/outbox-read-date.html#pyrogram.raw.base.OutboxReadDate" title="pyrogram.raw.base.OutboxReadDate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OutboxReadDate</span></code></a></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><a class="reference internal" href="../../base/outbox-read-date.html#pyrogram.raw.base.OutboxReadDate" title="pyrogram.raw.base.OutboxReadDate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">OutboxReadDate</span></code></a></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1089,7 +1089,7 @@ To set <a class="reference external" href="https://corefork.telegram.org/constru
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

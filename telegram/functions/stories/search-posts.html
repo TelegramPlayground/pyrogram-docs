@@ -1023,11 +1023,10 @@
 <h1>stories.SearchPosts<a class="headerlink" href="#stories-searchposts" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.stories.SearchPosts">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.stories.</span></span><span class="sig-name descname"><span class="pre">SearchPosts</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/stories/search_posts.py#L35-L117"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.stories.SearchPosts" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.stories.</span></span><span class="sig-name descname"><span class="pre">SearchPosts</span></span><a class="headerlink" href="#pyrogram.raw.functions.stories.SearchPosts" title="Link to this definition">¶</a></dt>
 <dd><p>Globally search for <a class="reference external" href="https://corefork.telegram.org/api/stories">stories</a> using a hashtag or a <a class="reference external" href="https://corefork.telegram.org/api/stories#location-tags">location media area</a>, see <a class="reference external" href="https://corefork.telegram.org/api/stories#searching-stories">here</a> for more info on the full flow.
 Either hashtag or area must be set when invoking the method.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Users</span>
 <span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
@@ -1035,23 +1034,21 @@ Either hashtag or area must be set when invoking the method.</p>
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">D1810907</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>offset (<code class="docutils literal notranslate"><span class="pre">str</span></code>):</dt><dd><p>Offset for <a class="reference external" href="https://corefork.telegram.org/api/offsets">pagination</a>: initially an empty string, then the next_offset from the previously returned <a class="reference external" href="https://corefork.telegram.org/constructor/stories.foundStories">stories.foundStories</a>.</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>offset</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – Offset for <a class="reference external" href="https://corefork.telegram.org/api/offsets">pagination</a>: initially an empty string, then the next_offset from the previously returned <a class="reference external" href="https://corefork.telegram.org/constructor/stories.foundStories">stories.foundStories</a>.</p></li>
+<li><p><strong>limit</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>) – Maximum number of results to return, <a class="reference external" href="https://corefork.telegram.org/api/offsets">see pagination</a></p></li>
+<li><p><strong>hashtag</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>) – Hashtag (without the #)</p></li>
+<li><p><strong>area</strong> (<a class="reference internal" href="../../base/media-area.html#pyrogram.raw.base.MediaArea" title="pyrogram.raw.base.MediaArea"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MediaArea</span></code></a>, <em>optional</em>) – A <a class="reference external" href="https://corefork.telegram.org/constructor/mediaAreaGeoPoint">mediaAreaGeoPoint</a> or a <a class="reference external" href="https://corefork.telegram.org/constructor/mediaAreaVenue">mediaAreaVenue</a>.  Note <a class="reference external" href="https://corefork.telegram.org/constructor/mediaAreaGeoPoint">mediaAreaGeoPoint</a> areas may be searched only if they have an associated address.</p></li>
+<li><p><strong>peer</strong> (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>, <em>optional</em>) – If set, returns only stories posted by this peer.</p></li>
+</ul>
 </dd>
-<dt>limit (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>):</dt><dd><p>Maximum number of results to return, <a class="reference external" href="https://corefork.telegram.org/api/offsets">see pagination</a></p>
-</dd>
-<dt>hashtag (<code class="docutils literal notranslate"><span class="pre">str</span></code>, <em>optional</em>):</dt><dd><p>Hashtag (without the #)</p>
-</dd>
-<dt>area (<a class="reference internal" href="../../base/media-area.html#pyrogram.raw.base.MediaArea" title="pyrogram.raw.base.MediaArea"><code class="xref py py-obj docutils literal notranslate"><span class="pre">MediaArea</span></code></a>, <em>optional</em>):</dt><dd><p>A <a class="reference external" href="https://corefork.telegram.org/constructor/mediaAreaGeoPoint">mediaAreaGeoPoint</a> or a <a class="reference external" href="https://corefork.telegram.org/constructor/mediaAreaVenue">mediaAreaVenue</a>.  Note <a class="reference external" href="https://corefork.telegram.org/constructor/mediaAreaGeoPoint">mediaAreaGeoPoint</a> areas may be searched only if they have an associated address.</p>
-</dd>
-<dt>peer (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>, <em>optional</em>):</dt><dd><p>If set, returns only stories posted by this peer.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../base/stories/found-stories.html#pyrogram.raw.base.stories.FoundStories" title="pyrogram.raw.base.stories.FoundStories"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stories.FoundStories</span></code></a></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><a class="reference internal" href="../../base/stories/found-stories.html#pyrogram.raw.base.stories.FoundStories" title="pyrogram.raw.base.stories.FoundStories"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stories.FoundStories</span></code></a></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1092,7 +1089,7 @@ Either hashtag or area must be set when invoking the method.</p>
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

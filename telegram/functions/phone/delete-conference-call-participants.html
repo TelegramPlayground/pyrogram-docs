@@ -1023,11 +1023,10 @@
 <h1>phone.DeleteConferenceCallParticipants<a class="headerlink" href="#phone-deleteconferencecallparticipants" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.phone.DeleteConferenceCallParticipants">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.phone.</span></span><span class="sig-name descname"><span class="pre">DeleteConferenceCallParticipants</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/phone/delete_conference_call_participants.py#L35-L108"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.phone.DeleteConferenceCallParticipants" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.phone.</span></span><span class="sig-name descname"><span class="pre">DeleteConferenceCallParticipants</span></span><a class="headerlink" href="#pyrogram.raw.functions.phone.DeleteConferenceCallParticipants" title="Link to this definition">¶</a></dt>
 <dd><p>Remove participants from a conference call.
 Exactly one of the only_left and kick flags must be set.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Users</span>
 <span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
@@ -1035,23 +1034,21 @@ Exactly one of the only_left and kick flags must be set.</p>
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">8CA60525</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>call (<a class="reference internal" href="../../base/input-group-call.html#pyrogram.raw.base.InputGroupCall" title="pyrogram.raw.base.InputGroupCall"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputGroupCall</span></code></a>):</dt><dd><p>The conference call.</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>call</strong> (<a class="reference internal" href="../../base/input-group-call.html#pyrogram.raw.base.InputGroupCall" title="pyrogram.raw.base.InputGroupCall"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputGroupCall</span></code></a>) – The conference call.</p></li>
+<li><p><strong>ids</strong> (List of <code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>) – IDs of users to remove.</p></li>
+<li><p><strong>block</strong> (<code class="docutils literal notranslate"><span class="pre">bytes</span></code>) – The <a class="reference external" href="https://corefork.telegram.org/api/end-to-end/group-calls">block containing an appropriate e2e.chain.changeSetGroupState event</a></p></li>
+<li><p><strong>only_left</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – Whether this is a removal of members that already left the conference call.</p></li>
+<li><p><strong>kick</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – Whether this is a forced removal of active members in a conference call.</p></li>
+</ul>
 </dd>
-<dt>ids (List of <code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>):</dt><dd><p>IDs of users to remove.</p>
-</dd>
-<dt>block (<code class="docutils literal notranslate"><span class="pre">bytes</span></code>):</dt><dd><p>The <a class="reference external" href="https://corefork.telegram.org/api/end-to-end/group-calls">block containing an appropriate e2e.chain.changeSetGroupState event</a></p>
-</dd>
-<dt>only_left (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>Whether this is a removal of members that already left the conference call.</p>
-</dd>
-<dt>kick (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>Whether this is a forced removal of active members in a conference call.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../base/updates.html#pyrogram.raw.base.Updates" title="pyrogram.raw.base.Updates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Updates</span></code></a></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><a class="reference internal" href="../../base/updates.html#pyrogram.raw.base.Updates" title="pyrogram.raw.base.Updates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Updates</span></code></a></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1092,7 +1089,7 @@ Exactly one of the only_left and kick flags must be set.</p>
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

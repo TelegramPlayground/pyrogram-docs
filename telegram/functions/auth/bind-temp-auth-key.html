@@ -1023,31 +1023,33 @@
 <h1>auth.BindTempAuthKey<a class="headerlink" href="#auth-bindtempauthkey" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.auth.BindTempAuthKey">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.auth.</span></span><span class="sig-name descname"><span class="pre">BindTempAuthKey</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/auth/bind_temp_auth_key.py#L35-L100"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.auth.BindTempAuthKey" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.auth.</span></span><span class="sig-name descname"><span class="pre">BindTempAuthKey</span></span><a class="headerlink" href="#pyrogram.raw.functions.auth.BindTempAuthKey" title="Link to this definition">¶</a></dt>
 <dd><p>Binds a temporary authorization key temp_auth_key_id to the permanent authorization key perm_auth_key_id. Each permanent key may only be bound to one temporary key at a time, binding a new temporary key overwrites the previous one.
 For more information, see <a class="reference external" href="https://corefork.telegram.org/api/pfs">Perfect Forward Secrecy</a>.</p>
-<blockquote>
-<div><dl class="simple">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method can be used by not yet logged in connections.</p>
+</div>
+<dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
 <li><p>Layer: <code class="docutils literal notranslate"><span class="pre">224</span></code></p></li>
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">CDD42A05</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>perm_auth_key_id (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>):</dt><dd><p>Permanent auth_key_id to bind to</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>perm_auth_key_id</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>) – Permanent auth_key_id to bind to</p></li>
+<li><p><strong>nonce</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>) – Random long from <a class="reference external" href="#binding-message-contents">Binding message contents</a></p></li>
+<li><p><strong>expires_at</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>) – Unix timestamp to invalidate temporary key, see <a class="reference external" href="#binding-message-contents">Binding message contents</a></p></li>
+<li><p><strong>encrypted_message</strong> (<code class="docutils literal notranslate"><span class="pre">bytes</span></code>) – See <a class="reference external" href="#generating-encrypted-message">Generating encrypted_message</a></p></li>
+</ul>
 </dd>
-<dt>nonce (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>):</dt><dd><p>Random long from <a class="reference external" href="#binding-message-contents">Binding message contents</a></p>
-</dd>
-<dt>expires_at (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>):</dt><dd><p>Unix timestamp to invalidate temporary key, see <a class="reference external" href="#binding-message-contents">Binding message contents</a></p>
-</dd>
-<dt>encrypted_message (<code class="docutils literal notranslate"><span class="pre">bytes</span></code>):</dt><dd><p>See <a class="reference external" href="#generating-encrypted-message">Generating encrypted_message</a></p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1088,7 +1090,7 @@ For more information, see <a class="reference external" href="https://corefork.t
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

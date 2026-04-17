@@ -1023,11 +1023,10 @@
 <h1>photos.UploadContactProfilePhoto<a class="headerlink" href="#photos-uploadcontactprofilephoto" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.photos.UploadContactProfilePhoto">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.photos.</span></span><span class="sig-name descname"><span class="pre">UploadContactProfilePhoto</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/photos/upload_contact_profile_photo.py#L35-L131"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.photos.UploadContactProfilePhoto" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.photos.</span></span><span class="sig-name descname"><span class="pre">UploadContactProfilePhoto</span></span><a class="headerlink" href="#pyrogram.raw.functions.photos.UploadContactProfilePhoto" title="Link to this definition">¶</a></dt>
 <dd><p>Upload a custom profile picture for a contact, or suggest a new profile picture to a contact.
 The file, video and video_emoji_markup flags are mutually exclusive.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Users</span>
 <span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
@@ -1035,27 +1034,23 @@ The file, video and video_emoji_markup flags are mutually exclusive.</p>
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">E14C4A71</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>user_id (<a class="reference internal" href="../../base/input-user.html#pyrogram.raw.base.InputUser" title="pyrogram.raw.base.InputUser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputUser</span></code></a>):</dt><dd><p>The contact</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>user_id</strong> (<a class="reference internal" href="../../base/input-user.html#pyrogram.raw.base.InputUser" title="pyrogram.raw.base.InputUser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputUser</span></code></a>) – The contact</p></li>
+<li><p><strong>suggest</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – If set, will send a <a class="reference external" href="https://corefork.telegram.org/constructor/messageActionSuggestProfilePhoto">messageActionSuggestProfilePhoto</a> service message to user_id, suggesting them to use the specified profile picture; otherwise, will set a personal profile picture for the user (only visible to the current user).</p></li>
+<li><p><strong>save</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – If set, removes a previously set personal profile picture (does not affect suggested profile pictures, to remove them simply delete the <a class="reference external" href="https://corefork.telegram.org/constructor/messageActionSuggestProfilePhoto">messageActionSuggestProfilePhoto</a> service message with <a class="reference external" href="https://corefork.telegram.org/method/messages.deleteMessages">messages.deleteMessages</a>).</p></li>
+<li><p><strong>file</strong> (<a class="reference internal" href="../../base/input-file.html#pyrogram.raw.base.InputFile" title="pyrogram.raw.base.InputFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputFile</span></code></a>, <em>optional</em>) – Profile photo</p></li>
+<li><p><strong>video</strong> (<a class="reference internal" href="../../base/input-file.html#pyrogram.raw.base.InputFile" title="pyrogram.raw.base.InputFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputFile</span></code></a>, <em>optional</em>) – <a class="reference external" href="https://corefork.telegram.org/api/files#animated-profile-pictures">Animated profile picture</a> video</p></li>
+<li><p><strong>video_start_ts</strong> (<code class="docutils literal notranslate"><span class="pre">float</span></code> <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>, <em>optional</em>) – Floating point UNIX timestamp in seconds, indicating the frame of the video/sticker that should be used as static preview; can only be used if video or video_emoji_markup is set.</p></li>
+<li><p><strong>video_emoji_markup</strong> (<a class="reference internal" href="../../base/video-size.html#pyrogram.raw.base.VideoSize" title="pyrogram.raw.base.VideoSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VideoSize</span></code></a>, <em>optional</em>) – Animated sticker profile picture, must contain either a <a class="reference external" href="https://corefork.telegram.org/constructor/videoSizeEmojiMarkup">videoSizeEmojiMarkup</a> or a <a class="reference external" href="https://corefork.telegram.org/constructor/videoSizeStickerMarkup">videoSizeStickerMarkup</a> constructor.</p></li>
+</ul>
 </dd>
-<dt>suggest (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>If set, will send a <a class="reference external" href="https://corefork.telegram.org/constructor/messageActionSuggestProfilePhoto">messageActionSuggestProfilePhoto</a> service message to user_id, suggesting them to use the specified profile picture; otherwise, will set a personal profile picture for the user (only visible to the current user).</p>
-</dd>
-<dt>save (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>If set, removes a previously set personal profile picture (does not affect suggested profile pictures, to remove them simply delete the <a class="reference external" href="https://corefork.telegram.org/constructor/messageActionSuggestProfilePhoto">messageActionSuggestProfilePhoto</a> service message with <a class="reference external" href="https://corefork.telegram.org/method/messages.deleteMessages">messages.deleteMessages</a>).</p>
-</dd>
-<dt>file (<a class="reference internal" href="../../base/input-file.html#pyrogram.raw.base.InputFile" title="pyrogram.raw.base.InputFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputFile</span></code></a>, <em>optional</em>):</dt><dd><p>Profile photo</p>
-</dd>
-<dt>video (<a class="reference internal" href="../../base/input-file.html#pyrogram.raw.base.InputFile" title="pyrogram.raw.base.InputFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputFile</span></code></a>, <em>optional</em>):</dt><dd><p><a class="reference external" href="https://corefork.telegram.org/api/files#animated-profile-pictures">Animated profile picture</a> video</p>
-</dd>
-<dt>video_start_ts (<code class="docutils literal notranslate"><span class="pre">float</span></code> <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>, <em>optional</em>):</dt><dd><p>Floating point UNIX timestamp in seconds, indicating the frame of the video/sticker that should be used as static preview; can only be used if video or video_emoji_markup is set.</p>
-</dd>
-<dt>video_emoji_markup (<a class="reference internal" href="../../base/video-size.html#pyrogram.raw.base.VideoSize" title="pyrogram.raw.base.VideoSize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">VideoSize</span></code></a>, <em>optional</em>):</dt><dd><p>Animated sticker profile picture, must contain either a <a class="reference external" href="https://corefork.telegram.org/constructor/videoSizeEmojiMarkup">videoSizeEmojiMarkup</a> or a <a class="reference external" href="https://corefork.telegram.org/constructor/videoSizeStickerMarkup">videoSizeStickerMarkup</a> constructor.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../base/photos/photo.html#pyrogram.raw.base.photos.Photo" title="pyrogram.raw.base.photos.Photo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">photos.Photo</span></code></a></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><a class="reference internal" href="../../base/photos/photo.html#pyrogram.raw.base.photos.Photo" title="pyrogram.raw.base.photos.Photo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">photos.Photo</span></code></a></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1096,7 +1091,7 @@ The file, video and video_emoji_markup flags are mutually exclusive.</p>
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

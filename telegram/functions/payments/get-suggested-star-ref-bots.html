@@ -1023,11 +1023,10 @@
 <h1>payments.GetSuggestedStarRefBots<a class="headerlink" href="#payments-getsuggestedstarrefbots" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.payments.GetSuggestedStarRefBots">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.payments.</span></span><span class="sig-name descname"><span class="pre">GetSuggestedStarRefBots</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/payments/get_suggested_star_ref_bots.py#L35-L108"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.payments.GetSuggestedStarRefBots" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.payments.</span></span><span class="sig-name descname"><span class="pre">GetSuggestedStarRefBots</span></span><a class="headerlink" href="#pyrogram.raw.functions.payments.GetSuggestedStarRefBots" title="Link to this definition">¶</a></dt>
 <dd><p>Obtain a list of suggested <a class="reference external" href="https://corefork.telegram.org/api/bots/webapps">mini apps</a> with available <a class="reference external" href="https://corefork.telegram.org/api/bots/referrals">affiliate programs</a>
 order_by_revenue and order_by_date are mutually exclusive: if neither is set, results are sorted by profitability.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Users</span>
 <span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
@@ -1035,23 +1034,21 @@ order_by_revenue and order_by_date are mutually exclusive: if neither is set, re
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">D6B48F7</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>peer (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>):</dt><dd><p>The peer that will become the affiliate: star commissions will be transferred to this peer’s star balance.</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>peer</strong> (<a class="reference internal" href="../../base/input-peer.html#pyrogram.raw.base.InputPeer" title="pyrogram.raw.base.InputPeer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputPeer</span></code></a>) – The peer that will become the affiliate: star commissions will be transferred to this peer’s star balance.</p></li>
+<li><p><strong>offset</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) – Offset for pagination, taken from <a class="reference external" href="https://corefork.telegram.org/constructor/payments.suggestedStarRefBots">payments.suggestedStarRefBots</a>.next_offset, initially empty.</p></li>
+<li><p><strong>limit</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>) – Maximum number of results to return, <a class="reference external" href="https://corefork.telegram.org/api/offsets">see pagination</a></p></li>
+<li><p><strong>order_by_revenue</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – If set, orders results by the expected revenue</p></li>
+<li><p><strong>order_by_date</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – If set, orders results by the creation date of the affiliate program</p></li>
+</ul>
 </dd>
-<dt>offset (<code class="docutils literal notranslate"><span class="pre">str</span></code>):</dt><dd><p>Offset for pagination, taken from <a class="reference external" href="https://corefork.telegram.org/constructor/payments.suggestedStarRefBots">payments.suggestedStarRefBots</a>.next_offset, initially empty.</p>
-</dd>
-<dt>limit (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">32-bit</span></code>):</dt><dd><p>Maximum number of results to return, <a class="reference external" href="https://corefork.telegram.org/api/offsets">see pagination</a></p>
-</dd>
-<dt>order_by_revenue (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>If set, orders results by the expected revenue</p>
-</dd>
-<dt>order_by_date (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>If set, orders results by the creation date of the affiliate program</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../base/payments/suggested-star-ref-bots.html#pyrogram.raw.base.payments.SuggestedStarRefBots" title="pyrogram.raw.base.payments.SuggestedStarRefBots"><code class="xref py py-obj docutils literal notranslate"><span class="pre">payments.SuggestedStarRefBots</span></code></a></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><a class="reference internal" href="../../base/payments/suggested-star-ref-bots.html#pyrogram.raw.base.payments.SuggestedStarRefBots" title="pyrogram.raw.base.payments.SuggestedStarRefBots"><code class="xref py py-obj docutils literal notranslate"><span class="pre">payments.SuggestedStarRefBots</span></code></a></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1092,7 +1089,7 @@ order_by_revenue and order_by_date are mutually exclusive: if neither is set, re
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

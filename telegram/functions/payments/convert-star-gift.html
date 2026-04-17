@@ -1023,27 +1023,30 @@
 <h1>payments.ConvertStarGift<a class="headerlink" href="#payments-convertstargift" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.payments.ConvertStarGift">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.payments.</span></span><span class="sig-name descname"><span class="pre">ConvertStarGift</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/payments/convert_star_gift.py#L35-L78"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.payments.ConvertStarGift" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.payments.</span></span><span class="sig-name descname"><span class="pre">ConvertStarGift</span></span><a class="headerlink" href="#pyrogram.raw.functions.payments.ConvertStarGift" title="Link to this definition">¶</a></dt>
 <dd><p>Convert a <a class="reference external" href="https://corefork.telegram.org/api/gifts">received gift</a> into Telegram Stars: this will permanently destroy the gift, converting it into <a class="reference external" href="https://corefork.telegram.org/constructor/starGift">starGift</a>.convert_stars <a class="reference external" href="https://corefork.telegram.org/api/stars">Telegram Stars</a>, added to the user’s balance.
 Note that <a class="reference external" href="https://corefork.telegram.org/constructor/starGift">starGift</a>.convert_stars will be less than the buying price (<a class="reference external" href="https://corefork.telegram.org/constructor/starGift">starGift</a>.stars) of the gift if it was originally bought using Telegram Stars bought a long time ago.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Users</span>
-<span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl class="simple">
+<span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method can be invoked over a <a class="reference external" href="https://corefork.telegram.org/api/bots/connected-business-bots">business connection »</a></p>
+</div>
+<dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
 <li><p>Layer: <code class="docutils literal notranslate"><span class="pre">224</span></code></p></li>
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">74BF076B</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>stargift (<a class="reference internal" href="../../base/input-saved-star-gift.html#pyrogram.raw.base.InputSavedStarGift" title="pyrogram.raw.base.InputSavedStarGift"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputSavedStarGift</span></code></a>):</dt><dd><p>The gift to convert.</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>stargift</strong> (<a class="reference internal" href="../../base/input-saved-star-gift.html#pyrogram.raw.base.InputSavedStarGift" title="pyrogram.raw.base.InputSavedStarGift"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputSavedStarGift</span></code></a>) – The gift to convert.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1084,7 +1087,7 @@ Note that <a class="reference external" href="https://corefork.telegram.org/cons
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               

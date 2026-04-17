@@ -1023,12 +1023,11 @@
 <h1>channels.UpdatePaidMessagesPrice<a class="headerlink" href="#channels-updatepaidmessagesprice" title="Link to this heading">¶</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyrogram.raw.functions.channels.UpdatePaidMessagesPrice">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.channels.</span></span><span class="sig-name descname"><span class="pre">UpdatePaidMessagesPrice</span></span><a class="reference external" href="https://github.com/TelegramPlayGround/Pyrogram/blob/64b4a69/pyrogram/raw/functions/channels/update_paid_messages_price.py#L35-L95"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyrogram.raw.functions.channels.UpdatePaidMessagesPrice" title="Link to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyrogram.raw.functions.channels.</span></span><span class="sig-name descname"><span class="pre">UpdatePaidMessagesPrice</span></span><a class="headerlink" href="#pyrogram.raw.functions.channels.UpdatePaidMessagesPrice" title="Link to this definition">¶</a></dt>
 <dd><p>Enable or disable <a class="reference external" href="https://corefork.telegram.org/api/paid-messages">paid messages</a> in this <a class="reference external" href="https://corefork.telegram.org/api/channel">supergroup</a> or <a class="reference external" href="https://corefork.telegram.org/api/monoforum">monoforum</a>.
 Also used to <a class="reference external" href="https://corefork.telegram.org/api/monoforum">enable or disable monoforums aka direct messages in a channel</a>.
 Note that passing the ID of the monoforum itself to channel will return a CHANNEL_MONOFORUM_UNSUPPORTED error: pass the ID of the associated channel to edit the settings of the associated monoforum, instead.</p>
-<blockquote>
-<div><strong>Usable by</strong>
+<strong>Usable by</strong>
 <span class="usable-by"><i class="fa-solid fa-check" style="color: var(--color-green)"></i> Users</span>
 <span class="usable-by"><i class="fa-solid fa-xmark" style="color: var(--color-red)"></i> Bots</span><dl class="simple">
 <dt>Details:</dt><dd><ul class="simple">
@@ -1036,19 +1035,19 @@ Note that passing the ID of the monoforum itself to channel will return a CHANNE
 <li><p>ID: <code class="docutils literal notranslate"><span class="pre">4B12327B</span></code></p></li>
 </ul>
 </dd>
-<dt>Parameters:</dt><dd><dl class="simple">
-<dt>channel (<a class="reference internal" href="../../base/input-channel.html#pyrogram.raw.base.InputChannel" title="pyrogram.raw.base.InputChannel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputChannel</span></code></a>):</dt><dd><p>Pass the supergroup ID for supergroups and the ID of the <a class="reference external" href="https://corefork.telegram.org/api/channel">channel</a> to modify the setting in the associated monoforum.</p>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>channel</strong> (<a class="reference internal" href="../../base/input-channel.html#pyrogram.raw.base.InputChannel" title="pyrogram.raw.base.InputChannel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">InputChannel</span></code></a>) – Pass the supergroup ID for supergroups and the ID of the <a class="reference external" href="https://corefork.telegram.org/api/channel">channel</a> to modify the setting in the associated monoforum.</p></li>
+<li><p><strong>send_paid_messages_stars</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>) – Specifies the required amount of <a class="reference external" href="https://corefork.telegram.org/api/stars">Telegram Stars</a> users must pay to send messages to the supergroup or monoforum.</p></li>
+<li><p><strong>broadcast_messages_allowed</strong> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>) – Only usable for channels, enables or disables the associated <a class="reference external" href="https://corefork.telegram.org/api/monoforum">monoforum aka direct messages</a>.</p></li>
+</ul>
 </dd>
-<dt>send_paid_messages_stars (<code class="docutils literal notranslate"><span class="pre">int</span></code> <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>):</dt><dd><p>Specifies the required amount of <a class="reference external" href="https://corefork.telegram.org/api/stars">Telegram Stars</a> users must pay to send messages to the supergroup or monoforum.</p>
-</dd>
-<dt>broadcast_messages_allowed (<code class="docutils literal notranslate"><span class="pre">bool</span></code>, <em>optional</em>):</dt><dd><p>Only usable for channels, enables or disables the associated <a class="reference external" href="https://corefork.telegram.org/api/monoforum">monoforum aka direct messages</a>.</p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="../../base/updates.html#pyrogram.raw.base.Updates" title="pyrogram.raw.base.Updates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Updates</span></code></a></p>
 </dd>
 </dl>
-</dd>
-<dt>Returns:</dt><dd><p><a class="reference internal" href="../../base/updates.html#pyrogram.raw.base.Updates" title="pyrogram.raw.base.Updates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Updates</span></code></a></p>
-</dd>
-</dl>
-</div></blockquote>
 </dd></dl>
 
 </section>
@@ -1089,7 +1088,7 @@ Note that passing the ID of the monoforum itself to channel will return a CHANNE
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/64b4a69" aria-label="GitHub"></a>
+              <a class="muted-link fa-brands fa-solid fa-github fa-2x" href="https://github.com/TelegramPlayGround/pyrogram/tree/2787e8e" aria-label="GitHub"></a>
               <a class="muted-link fa-brands fa-solid fa-telegram fa-2x" href="https://PyroTGFork.t.me/2" aria-label="Telegram Channel"></a>
               <a class="muted-link fa-brands fa-solid fa-python fa-2x" href="https://pypi.org/project/pyrotgfork/" aria-label=""></a>
               
