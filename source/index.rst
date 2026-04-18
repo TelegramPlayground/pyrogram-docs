@@ -20,7 +20,7 @@ Welcome to PyroTGFork Pyrogram Fork
             Homepage
         </a>
         •
-        <a href="https://github.com/TelegramPlayGround/pyrogram">
+        <a href="https://github.com/TelegramPlayGround/PyroTGFork">
             Development
         </a>
         •

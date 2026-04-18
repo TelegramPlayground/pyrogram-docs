@@ -10,16 +10,16 @@ in reverse chronological order. You should read this when upgrading
 to this fork to know where your code can break, and where
 it can take advantage of new goodies!
 
-`For a more detailed description, please check the commits. <https://github.com/TelegramPlayGround/pyrogram/commits/dev/>`__
+`For a more detailed description, please check the commits. <https://github.com/TelegramPlayGround/PyroTGFork/commits/dev/>`__
 
-If you found any issue or have any suggestions, feel free to make `an issue <https://github.com/TelegramPlayGround/pyrogram/issues>`__ on github.
+If you found any issue or have any suggestions, feel free to make `an issue <https://github.com/TelegramPlayGround/PyroTGFork/issues>`__ on github.
 
 .. admonition :: Breaking Changes in this Fork
     :class: tip
 
     - In :meth:`~pyrogram.Client.copy_message`, ``ValueError`` is raised instead of ``logging`` it.
     - In :meth:`~pyrogram.Client.download_media`, if the message is a :obj:`~pyrogram.types.PaidMediaInfo` with more than one ``paid_media`` **and** ``idx`` was not specified, then a list of paths or binary file-like objects is returned.
-    - PR `#115 <https://github.com/TelegramPlayGround/pyrogram/pull/115>`_ This `change <https://github.com/pyrogram/pyrogram/pull/966#issuecomment-1108858881>`_ breaks some usages with offset-naive and offset-aware datetimes.
+    - PR `#115 <https://github.com/TelegramPlayGround/PyroTGFork/pull/115>`_ This `change <https://github.com/pyrogram/pyrogram/pull/966#issuecomment-1108858881>`_ breaks some usages with offset-naive and offset-aware datetimes.
     - PR from upstream `#1411 <https://github.com/pyrogram/pyrogram/pull/1411>`_: Rename some of the attributes of :obj:`~pyrogram.enums.MessagesFilter` for consistency.
     - If you relied on internal types like ``import pyrogram.file_id`` OR ``import pyrogram.utils``, Then read this full document to know where `else <https://t.me/PyrogramChat/42497>`_ your code will break.
     - :obj:`~pyrogram.types.InlineKeyboardButton` only accepts keyword arguments instead of positional arguments.
@@ -45,14 +45,14 @@ Changes in this Fork
 - Added the classes :obj:`~pyrogram.types.PollOptionAdded` and :obj:`~pyrogram.types.PollOptionDeleted` and the fields ``poll_option_added``, ``poll_option_deleted`` to the class :obj:`~pyrogram.types.Message`.
 - Added the field ``poll_option_id`` to the class :obj:`~pyrogram.types.ReplyParameters`, allowing to reply to a specific poll option.
 - Added the field ``reply_to_poll_option_id`` to the class :obj:`~pyrogram.types.Message`.
-- Added the method :meth:`~pyrogram.Client.send_message_draft`  (contributed by @sudo-py-dev in `#231 <https://github.com/TelegramPlayground/pyrogram/pull/231>`__).
+- Added the method :meth:`~pyrogram.Client.send_message_draft`  (contributed by @sudo-py-dev in `#231 <https://github.com/TelegramPlayground/PyroTGFork/pull/231>`__).
 - View `new and changed <https://telegramplayground.github.io/TG-APIs/TL/diff/tdlib.html?from=222&to=223>`__ `raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=222&to=223>`__.
 
 +------------------------+
 | Scheme layer used: 223 |
 +------------------------+
 
-- Added the method :meth:`~pyrogram.Client.send_message_draft`, allowing bots to stream partial messages to a user while being generated. (contributed by @sudo-py-dev in `#231 <https://github.com/TelegramPlayground/pyrogram/pull/231>`__).
+- Added the method :meth:`~pyrogram.Client.send_message_draft`, allowing bots to stream partial messages to a user while being generated. (contributed by @sudo-py-dev in `#231 <https://github.com/TelegramPlayground/PyroTGFork/pull/231>`__).
 - Added the :obj:`~pyrogram.types.MessageEntity` type :obj:`~pyrogram.enums.MessageEntityType.DATE_TIME`, allowing to show a formatted date and time to the user.
 - Added the fields ``chat_owner_left``, ``chat_owner_changed``, ``chat_has_protected_content_toggled`` and ``chat_has_protected_content_disable_requested`` to the class :obj:`~pyrogram.types.Message`.
 - Added the field ``can_edit_tag`` to the class :obj:`~pyrogram.types.ChatPermissions`.
@@ -83,11 +83,11 @@ Changes in this Fork
 
 - fix: set description correctly in :obj:`~pyrogram.types.InlineQueryResultAnimation` (contributed by @Krau in `#262 <https://github.com/KurimuzonAkuma/kurigram/pull/262>`__).
 - Add generic return type for :meth:`~pyrogram.Client.invoke` (contributed by @ZeN220 in `#252 <https://github.com/KurimuzonAkuma/kurigram/pull/252>`__).
-- fix: :meth:`~pyrogram.Client.copy_message` and :meth:`~pyrogram.types.Message.copy` (contributed by @beepsound in `#210 <https://github.com/TelegramPlayground/pyrogram/pull/210>`__).
+- fix: :meth:`~pyrogram.Client.copy_message` and :meth:`~pyrogram.types.Message.copy` (contributed by @beepsound in `#210 <https://github.com/TelegramPlayground/PyroTGFork/pull/210>`__).
 - fix: file pointer position before returning file (contributed by @anonymousx97)
 - Add ``offset_date`` and ``offset_message_id`` in :meth:`~pyrogram.Client.get_dialogs` and :meth:`~pyrogram.Client.search_global`.
-- Enhance ``full_name`` property of :obj:`~pyrogram.types.Chat` (contributed by @Ling-ex in `#206 <https://github.com/TelegramPlayground/pyrogram/pull/206>`__).
-- fix: :meth:`~pyrogram.Client.set_chat_permissions` method (contributed by @sudo-py-dev in `#204 <https://github.com/TelegramPlayground/pyrogram/pull/204>`__).
+- Enhance ``full_name`` property of :obj:`~pyrogram.types.Chat` (contributed by @Ling-ex in `#206 <https://github.com/TelegramPlayground/PyroTGFork/pull/206>`__).
+- fix: :meth:`~pyrogram.Client.set_chat_permissions` method (contributed by @sudo-py-dev in `#204 <https://github.com/TelegramPlayground/PyroTGFork/pull/204>`__).
 - Add ``message_effect_id`` in :meth:`~pyrogram.Client.forward_messages` and :meth:`~pyrogram.types.Message.forward`.
 - View `new and changed <https://telegramplayground.github.io/TG-APIs/TL/diff/tdlib.html?from=214&to=220>`__ `raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=214&to=220>`__.
 
@@ -95,11 +95,11 @@ Changes in this Fork
 | Scheme layer used: 214 |
 +------------------------+
 
-- `fix get_chat_photos <https://github.com/TelegramPlayground/pyrogram/pull/203>`.
-- `support filters.regex for ChosenInlineResult <https://github.com/TelegramPlayground/pyrogram/pull/198>`__.
+- `fix get_chat_photos <https://github.com/TelegramPlayground/PyroTGFork/pull/203>`.
+- `support filters.regex for ChosenInlineResult <https://github.com/TelegramPlayground/PyroTGFork/pull/198>`__.
 - Update :meth:`~pyrogram.types.Message.reply_game`, :meth:`~pyrogram.types.Message.reply_text`, :meth:`~pyrogram.types.Message.reply_animation`, :meth:`~pyrogram.types.Message.reply_audio`, :meth:`~pyrogram.types.Message.reply_contact`, :meth:`~pyrogram.types.Message.reply_document`, :meth:`~pyrogram.types.Message.reply_location`, :meth:`~pyrogram.types.Message.reply_media_group`, :meth:`~pyrogram.types.Message.reply_photo`, :meth:`~pyrogram.types.Message.reply_poll`, :meth:`~pyrogram.types.Message.reply_sticker`, :meth:`~pyrogram.types.Message.reply_venue`, :meth:`~pyrogram.types.Message.reply_video`, :meth:`~pyrogram.types.Message.reply_video_note`, :meth:`~pyrogram.types.Message.reply_voice`, :meth:`~pyrogram.types.Message.reply_invoice`, :meth:`~pyrogram.types.Message.forward`, :meth:`~pyrogram.types.Message.copy`, :meth:`~pyrogram.types.Message.reply_cached_media` methods to support direct_messages_topic_id.
-- `Fix get_dialogs <https://github.com/TelegramPlayground/pyrogram/pull/195>`__.
-- `Fix timestamp_to_datetime to correctly handle timezone conversion <https://github.com/TelegramPlayground/pyrogram/commit/fc838cf>`__.
+- `Fix get_dialogs <https://github.com/TelegramPlayground/PyroTGFork/pull/195>`__.
+- `Fix timestamp_to_datetime to correctly handle timezone conversion <https://github.com/TelegramPlayground/PyroTGFork/commit/fc838cf>`__.
 - View `new and changed <https://telegramplayground.github.io/TG-APIs/TL/diff/tdlib.html?from=211&to=214>`__ `raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=211&to=214>`__.
 
 +------------------------+
@@ -167,7 +167,7 @@ Changes in this Fork
 - Add :meth:`~pyrogram.Client.send_screenshot_notification`.
 - Add ``media`` in :obj:`~pyrogram.types.ExternalReplyInfo`.
 - Add :obj:`~pyrogram.enums.MessageOriginType` as enum instead of str, and updated the appropriate filters.
-- Document about `the issue #161 <https://github.com/TelegramPlayGround/pyrogram/issues/161>`__.
+- Document about `the issue #161 <https://github.com/TelegramPlayGround/PyroTGFork/issues/161>`__.
 - Make `User.block/unblock/get_common_chats async <https://github.com/KurimuzonAkuma/pyrogram/commit/7cab86a9eee4bd57ac96a1713f9bd37a7fc0ac09>`__, `Fix examples <https://github.com/KurimuzonAkuma/pyrogram/commit/f7f83de4331d6358332dbd0458755e28d59ec0f0>`__ and `Fix docs <https://github.com/KurimuzonAkuma/pyrogram/commit/f98b92765634f862310b21783b186fce66877a24>`__.
 - Try to return the service message (when applicable) in the method :meth:`~pyrogram.Client.set_chat_title`.
 - Added :meth:`~pyrogram.Client.delete_chat_history`.
@@ -188,7 +188,7 @@ Changes in this Fork
 - Fixed a bug with ``_client`` being None in :obj:`~pyrogram.handlers.ChosenInlineResultHandler`.
 - Added the parameters ``video_cover`` and ``video_start_timestamp`` to the method :meth:`~pyrogram.Client.copy_message`, allowing bots to change the start timestamp for copied videos.
 - Added ``for_paid_reactions`` in :meth:`~pyrogram.Client.get_send_as_chats`.
-- `Updated documentation and parameter names according to BOT API 8.3 <https://github.com/TelegramPlayGround/pyrogram/commit/7675b40>`__
+- `Updated documentation and parameter names according to BOT API 8.3 <https://github.com/TelegramPlayGround/PyroTGFork/commit/7675b40>`__
 - View `new and changed <https://telegramplayground.github.io/TG-APIs/TL/diff/tdlib.html?from=198&to=199>`__ `raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=198&to=199>`__.
 
 +------------------------+
@@ -252,7 +252,7 @@ Changes in this Fork
 +------------------------+
 
 - Added the methods :meth:`~pyrogram.Client.get_available_gifts`, :meth:`~pyrogram.Client.get_user_gifts`, :meth:`~pyrogram.Client.sell_gift`, :meth:`~pyrogram.Client.send_gift`, :meth:`~pyrogram.Client.toggle_gift_is_saved`, :meth:`~pyrogram.types.UserGift.toggle` and the types :obj:`~pyrogram.types.UserGift` and :obj:`~pyrogram.types.Gift`.
-- Added the parameter ``send_as`` in the appropriate methods and bound methods `PR 107 <https://github.com/TelegramPlayGround/pyrogram/pull/107>`_.
+- Added the parameter ``send_as`` in the appropriate methods and bound methods `PR 107 <https://github.com/TelegramPlayGround/PyroTGFork/pull/107>`_.
 - View `new and changed <https://telegramplayground.github.io/TG-APIs/TL/diff/tdlib.html?from=189&to=190>`__ `raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=189&to=190>`__.
 
 +------------------------+
@@ -283,7 +283,7 @@ Changes in this Fork
 +------------------------+
 
 - Try to return the service message (when applicable) in the methods :meth:`~pyrogram.Client.set_chat_photo`, :meth:`~pyrogram.types.Chat.set_photo`.
-- Added the methods :meth:`~pyrogram.Client.get_payment_form` and :meth:`~pyrogram.Client.send_payment_form` `#89 <https://github.com/TelegramPlayGround/pyrogram/pull/89>`__.
+- Added the methods :meth:`~pyrogram.Client.get_payment_form` and :meth:`~pyrogram.Client.send_payment_form` `#89 <https://github.com/TelegramPlayGround/PyroTGFork/pull/89>`__.
 - Added the fields ``expired_member_count``, ``subscription_period`` and ``subscription_price`` to the class :obj:`~pyrogram.types.ChatInviteLink`.
 - Added the field ``can_enable_paid_reaction`` to the class :obj:`~pyrogram.types.Chat`.
 - Added ``link`` property to :obj:`~pyrogram.types.Story` and fixed the ``link`` property in :obj:`~pyrogram.types.Message`.
@@ -318,8 +318,8 @@ Changes in this Fork
 - Added the :meth:`~pyrogram.Client.get_active_sessions`, :meth:`~pyrogram.Client.terminate_session`, :meth:`~pyrogram.types.ActiveSession.terminate`, and :meth:`~pyrogram.Client.terminate_all_other_sessions`.
 - Added the ``is_automatic_forward`` to the :obj:`~pyrogram.types.Message`.
 - Added the parameters ``offset_id`` to the :meth:`~pyrogram.Client.search_messages` and the parameters ``min_date``, ``max_date``, ``min_id``, ``max_id``, ``saved_messages_topic_id`` to the :meth:`~pyrogram.Client.search_messages_count`.
-- Dynamic session ReStart + restart optimizations (`#56 <https://github.com/TelegramPlayGround/pyrogram/pull/56>`__)
-- Added the :meth:`~pyrogram.Client.delete_account`, :meth:`~pyrogram.Client.transfer_chat_ownership`, :meth:`~pyrogram.Client.update_status` (`#49 <https://github.com/TelegramPlayGround/pyrogram/pull/49>`__, `#51 <https://github.com/TelegramPlayGround/pyrogram/pull/51>`__)
+- Dynamic session ReStart + restart optimizations (`#56 <https://github.com/TelegramPlayGround/PyroTGFork/pull/56>`__)
+- Added the :meth:`~pyrogram.Client.delete_account`, :meth:`~pyrogram.Client.transfer_chat_ownership`, :meth:`~pyrogram.Client.update_status` (`#49 <https://github.com/TelegramPlayGround/PyroTGFork/pull/49>`__, `#51 <https://github.com/TelegramPlayGround/PyroTGFork/pull/51>`__)
 - Added the class :obj:`~pyrogram.types.RefundedPayment`, containing information about a refunded payment.
 - Added the field ``refunded_payment`` to the class :obj:`~pyrogram.types.Message`, describing a service message about a refunded payment.
 - `View new and changed raw API methods <https://telegramplayground.github.io/TG-APIs/TL/diff/tdesktop.html?from=183&to=184>`__.
@@ -352,12 +352,12 @@ Changes in this Fork
 +------------------------+
 
 - Added the classes :obj:`~pyrogram.types.InputLocationMessageContent`, :obj:`~pyrogram.types.InputVenueMessageContent`, :obj:`~pyrogram.types.InputContactMessageContent`, :obj:`~pyrogram.types.InputInvoiceMessageContent`.`
-- Added ``background`` to :obj:`~pyrogram.types.Chat` (`#40 <https://github.com/TelegramPlayGround/pyrogram/pull/40>`_)
-- Added the methods :meth:`~pyrogram.Client.translate_text`, :meth:`~pyrogram.Client.translate_message_text`, :meth:`~pyrogram.types.Message.translate` and the type :obj:`~pyrogram.types.TranslatedText` (`#39 <https://github.com/TelegramPlayGround/pyrogram/pull/39>`_).
-- Added the methods :meth:`~pyrogram.Client.create_video_chat`, :meth:`~pyrogram.Client.discard_group_call`, :meth:`~pyrogram.Client.get_video_chat_rtmp_url` and the type :obj:`~pyrogram.types.RtmpUrl` (`#37 <https://github.com/TelegramPlayGround/pyrogram/pull/37>`_).
+- Added ``background`` to :obj:`~pyrogram.types.Chat` (`#40 <https://github.com/TelegramPlayGround/PyroTGFork/pull/40>`_)
+- Added the methods :meth:`~pyrogram.Client.translate_text`, :meth:`~pyrogram.Client.translate_message_text`, :meth:`~pyrogram.types.Message.translate` and the type :obj:`~pyrogram.types.TranslatedText` (`#39 <https://github.com/TelegramPlayGround/PyroTGFork/pull/39>`_).
+- Added the methods :meth:`~pyrogram.Client.create_video_chat`, :meth:`~pyrogram.Client.discard_group_call`, :meth:`~pyrogram.Client.get_video_chat_rtmp_url` and the type :obj:`~pyrogram.types.RtmpUrl` (`#37 <https://github.com/TelegramPlayGround/PyroTGFork/pull/37>`_).
 - Added :meth:`~Client.on_story` to listen to story updates.
 - Ability to run in `replit` environment without creating `a deployment <https://ask.replit.com/t/pyrogram-network-issue/33679/46>`_. Set the environment variable ``PYROGRAM_REPLIT_NWTRAFIK_PORT`` value to ``5222`` if you want to connect to Production Telegram Servers, **OR** Set the environment variable ``PYROGRAM_REPLIT_WNTRAFIK_PORT`` value to ``5223`` if you want to connect to Test Telegram Servers, before starting the :obj:`~pyrogram.Client`.
-- Added the :meth:`~pyrogram.Client.invite_group_call_participants` (`#35 <https://github.com/TelegramPlayGround/pyrogram/pull/35>`_).
+- Added the :meth:`~pyrogram.Client.invite_group_call_participants` (`#35 <https://github.com/TelegramPlayGround/PyroTGFork/pull/35>`_).
 - Added the types :obj:`~pyrogram.types.LabeledPrice`, :obj:`~pyrogram.types.OrderInfo`, :obj:`~pyrogram.types.PreCheckoutQuery`, :obj:`~pyrogram.types.ShippingAddress`, :obj:`~pyrogram.types.ShippingOption`, :obj:`~pyrogram.types.ShippingQuery` and :obj:`~pyrogram.types.SuccessfulPayment`.
 - Added the ``successful_payment`` parameter to the :obj:`~pyrogram.types.Message`. Added the filter :obj:`~pyrogram.filters.successful_payment` to detect service messages of Successful Payment type.
 - Added the methods :meth:`~pyrogram.Client.send_invoice`, :meth:`~pyrogram.Client.answer_pre_checkout_query` (:meth:`~pyrogram.types.PreCheckoutQuery.answer`), :meth:`~pyrogram.Client.answer_shipping_query` (:meth:`~pyrogram.types.ShippingQuery.answer`), :meth:`~pyrogram.Client.refund_star_payment` and :meth:`~pyrogram.Client.create_invoice_link`.
@@ -379,7 +379,7 @@ Changes in this Fork
 
 - Add ``invoice`` to :obj:`~pyrogram.types.Message` and :obj:`~pyrogram.types.ExternalReplyInfo`.
 - Add ``link_preview_options`` to :obj:`~pyrogram.Client`.
-- Support for the updated Channel ID format. `#28 <https://github.com/TelegramPlayGround/pyrogram/pull/28>`_
+- Support for the updated Channel ID format. `#28 <https://github.com/TelegramPlayGround/PyroTGFork/pull/28>`_
 - Improvements to :meth:`~pyrogram.Client.save_file` and :meth:`~pyrogram.Client.get_file` to handle the new `FLOOD_PREMIUM_WAIT <https://t.me/swiftgram/72>`_ errors.
 - Added ``has_animation``, ``is_personal``, ``minithumbnail`` parameters to :obj:`~pyrogram.types.ChatPhoto`.
 - Changed return type of :meth:`~pyrogram.Client.get_chat_photos` to return :obj:`~pyrogram.types.Photo` or :obj:`~pyrogram.types.Animation`.
@@ -420,7 +420,7 @@ Changes in this Fork
 - Added missing parameters in :meth:`~pyrogram.Client.create_group`, :meth:`~pyrogram.Client.create_supergroup`, :meth:`~pyrogram.Client.create_channel`.
 - Try to return the service message (when applicable) in the methods :meth:`~pyrogram.Client.add_chat_members`, :meth:`~pyrogram.Client.promote_chat_member`
 - Add :obj:`~pyrogram.enums.ChatAction.TRIGGER_EMOJI_ANIMATION` and :obj:`~pyrogram.enums.ChatAction.WATCH_EMOJI_ANIMATION` in :meth:`~pyrogram.Client.send_chat_action` and :meth:`~pyrogram.types.Message.reply_chat_action`.
-- Attempted to revert the Backward Incompatible changes in the commits `fb118f95d <https://github.com/TelegramPlayGround/pyrogram/commit/fb118f9>`_ and `848bc8644 <https://github.com/TelegramPlayGround/pyrogram/commit/848bc86>`_.
+- Attempted to revert the Backward Incompatible changes in the commits `fb118f95d <https://github.com/TelegramPlayGround/PyroTGFork/commit/fb118f9>`_ and `848bc8644 <https://github.com/TelegramPlayGround/PyroTGFork/commit/848bc86>`_.
 - Added ``callback_data_with_password`` to :obj:`~pyrogram.types.InlineKeyboardButton` and added support in :meth:`~pyrogram.types.Message.click` for such buttons.
 - PR from upstream: `1391 <https://github.com/pyrogram/pyrogram/pull/1391>`_ without attribution.
 - Added ``gifted_premium`` service message to :obj:`~pyrogram.types.Message`.
@@ -496,9 +496,9 @@ Changes in this Fork
 
 - Renamed ``placeholder`` to ``input_field_placeholder`` in :obj:`~pyrogram.types.ForceReply` and :obj:`~pyrogram.types.ReplyKeyboardMarkup`.
 - Add ``link`` parameter in :meth:`~pyrogram.Client.get_messages`
-- `fix(filters): add type hints in filters.py <https://github.com/TelegramPlayGround/pyrogram/pull/8>`_
+- `fix(filters): add type hints in filters.py <https://github.com/TelegramPlayGround/PyroTGFork/pull/8>`_
 - Documentation Builder Fixes
-- `faster-pyrogram <https://github.com/cavallium/faster-pyrogram>`__ is not polished or documented for anyone else's use. We don't have the capacity to support `faster-pyrogram <https://github.com/TelegramPlayGround/pyrogram/pull/6>`__ as an independent open-source project, nor any desire for it to become an alternative to Pyrogram. Our goal in making this code available is a unified faster Pyrogram. `... <https://github.com/cavallium/faster-pyrogram/blob/b781909/README.md#L28>`__
+- `faster-pyrogram <https://github.com/cavallium/faster-pyrogram>`__ is not polished or documented for anyone else's use. We don't have the capacity to support `faster-pyrogram <https://github.com/TelegramPlayGround/PyroTGFork/pull/6>`__ as an independent open-source project, nor any desire for it to become an alternative to Pyrogram. Our goal in making this code available is a unified faster Pyrogram. `... <https://github.com/cavallium/faster-pyrogram/blob/b781909/README.md#L28>`__
 
 +-----------------------------+
 |   Leaked Scheme Layers (2)  |
@@ -516,10 +516,10 @@ Changes in this Fork
 - Added the field ``switch_inline_query_chosen_chat`` of the type :obj:`~pyrogram.types.SwitchInlineQueryChosenChat` to the class :obj:`~pyrogram.types.InlineKeyboardButton`, which allows bots to switch to inline mode in a chosen chat of the given type.
 - Add support for ``pay`` in :obj:`~pyrogram.types.InlineKeyboardButton`
 - `#1345 <https://github.com/pyrogram/pyrogram/issues/1345>`_
-- `Add undocumented things <https://github.com/TelegramPlayGround/pyrogram/commit/8a72939d98f343eae1e07981f95769efaa741e4e>`_
+- `Add undocumented things <https://github.com/TelegramPlayGround/PyroTGFork/commit/8a72939d98f343eae1e07981f95769efaa741e4e>`_
 - `Add missing enums.SentCodeType <https://github.com/KurimuzonAkuma/pyrogram/commit/40ddcbca6062f13958f4ca2c9852f8d1c4d62f3c>`_
 - `#693 <https://github.com/KurimuzonAkuma/pyrogram/pull/693>`_
-- Revert `e678c05 <https://github.com/TelegramPlayGround/pyrogram/commit/e678c054d4aa0bbbb7d583eb426ca8753a4c9354>`_ and stole squashed unauthored changes from `bcd18d5 <https://github.com/Masterolic/pyrogram/commit/bcd18d5e04f18f949389a03f309816d6f0f9eabe>`_
+- Revert `e678c05 <https://github.com/TelegramPlayGround/PyroTGFork/commit/e678c054d4aa0bbbb7d583eb426ca8753a4c9354>`_ and stole squashed unauthored changes from `bcd18d5 <https://github.com/Masterolic/pyrogram/commit/bcd18d5e04f18f949389a03f309816d6f0f9eabe>`_
 
 +------------------------+
 | Scheme layer used: 174 |
@@ -580,11 +580,11 @@ Changes in this Fork
 - Added ``disable_content_type_detection`` parameter to :obj:`~pyrogram.types.InputMediaVideo`.
 - Added ``has_spoiler`` parameter to :meth:`~pyrogram.Client.copy_message`.
 - Improved :meth:`~pyrogram.Client.get_chat_history`: add ``min_id`` and ``max_id`` params.
-- `Prevent connection to dc every time in get_file <https://github.com/TelegramPlayGround/pyrogram/commit/f2581fd7ab84ada7685645a6f80475fbea5e743a>`_
+- `Prevent connection to dc every time in get_file <https://github.com/TelegramPlayGround/PyroTGFork/commit/f2581fd7ab84ada7685645a6f80475fbea5e743a>`_
 - Added ``_raw`` to the :obj:`~pyrogram.types.Chat`, :obj:`~pyrogram.types.Dialog`, :obj:`~pyrogram.types.Message` and :obj:`~pyrogram.types.User` objects.
 - Fix downloading media to ``WORKDIR`` when ``WORKDIR`` was not specified.
-- `Update multiple fragment chat usernames <https://github.com/TelegramPlayGround/pyrogram/commit/39aea4831ee18e5263bf6755306f0ca49f075bda>`_
-- `Custom Storage Engines <https://github.com/TelegramPlayGround/pyrogram/commit/cd937fff623759dcac8f437a8c524684868590a4>`_
+- `Update multiple fragment chat usernames <https://github.com/TelegramPlayGround/PyroTGFork/commit/39aea4831ee18e5263bf6755306f0ca49f075bda>`_
+- `Custom Storage Engines <https://github.com/TelegramPlayGround/PyroTGFork/commit/cd937fff623759dcac8f437a8c524684868590a4>`_
 - Documentation fix for ``user.mention`` in :obj:`~pyrogram.types.User`.
 
 +------------------------+

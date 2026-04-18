@@ -35,7 +35,7 @@ commit_id = subprocess.check_output([
     "HEAD",
 ]).decode("UTF-8").strip()
 
-project_url = "https://github.com/TelegramPlayGround/Pyrogram"
+project_url = "https://github.com/TelegramPlayGround/PyroTGFork"
 # --- SETUP: Define your repository root ---
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
 project = "pyrotgfork"
@@ -96,7 +96,7 @@ html_theme_options = {
     "footer_icons": [
         {  # Github logo
             "name": "GitHub",
-            "url": f"https://github.com/TelegramPlayGround/pyrogram/tree/{commit_id}",
+            "url": f"https://github.com/TelegramPlayGround/PyroTGFork/tree/{commit_id}",
             "class": "fa-brands fa-solid fa-github fa-2x",
         },
         {
