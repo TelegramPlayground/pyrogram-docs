@@ -224,6 +224,7 @@ def pyrogram_api():
         """,
         authorization="""
         Authorization
+            get_option
             initialize
             sign_up
             accept_terms_of_service
